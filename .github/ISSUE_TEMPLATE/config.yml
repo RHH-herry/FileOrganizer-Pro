@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 安全漏洞报告
+    url: https://github.com/RHH-herry/FileOrganizer-Pro/blob/main/SECURITY.md
+    about: 安全问题请勿公开提交，请按 SECURITY.md 的负责任披露流程私下报告
+  - name: 📖 使用文档与常见问题
+    url: https://rhh-herry.github.io/FileOrganizer-Pro/#faq
+    about: 安装、SmartScreen 提示、卸载等常见问题，先看这里
+  - name: 📋 更新日志
+    url: https://rhh-herry.github.io/FileOrganizer-Pro/changelog.html
+    about: 你遇到的问题可能已在新版本中修复
+  - name: 📧 商务与授权咨询
+    url: mailto:3871822145@qq.com
+    about: 商业授权、批量部署许可请直接邮件联系

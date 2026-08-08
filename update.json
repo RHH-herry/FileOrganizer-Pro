@@ -1,0 +1,16 @@
+{
+  "version": "1.2.0",
+  "channel": "stable",
+  "edition": "正式版 / Official Release",
+  "build": "2026.08.08.001",
+  "serial": "FOP-1.2.0-20260808-001",
+  "downloadUrl": "https://github.com/RHH-herry/FileOrganizer-Pro/releases/download/v1.2.0/FileOrganizer_Pro_v1.2.0_Setup.exe",
+  "releaseNotes": "v1.2.0 正式版（Stable / Official Release）\n- 众测阶段结束，功能与界面冻结为稳定基线\n- 苹果风格液态玻璃界面，系统级真圆角窗口\n- 快速整理 / 自定义规则引擎 / 批量重命名 / 重复文件检测 / 智能清理 / 撤销与历史 / 6 套主题\n- 全新不透明圆角弹窗，彻底去除透明残留与方角\n- 新增页面滚动加速：连续高速向下滑动时自动加速\n- 修复多项界面与稳定性问题\n- 新增 VERSION 版本元数据与 SECURITY.md 安全文档",
+  "releaseDate": "2026-08-08",
+  "minRequiredVersion": "1.0.0",
+  "sha256Hash": "9AAF0E87E5E31CDFDD120568BA5785BF7E0D9628CFA0749CE54444FE7422E320",
+  "hashAlgorithm": "SHA-256",
+  "forceUpdate": false,
+  "official": true,
+  "securityPolicy": "https://github.com/RHH-herry/FileOrganizer-Pro/blob/main/SECURITY.md"
+}

@@ -1,0 +1,2947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileOrganizer Pro — Windows 智能文件整理工具（免费下载·v1.2.0 正式版）</title>
+    <meta name="description" content="FileOrganizer Pro 是一款苹果风格的 Windows 文件整理工具：一键按类型/日期/名称智能归类，支持自定义规则引擎、批量重命名、重复文件检测、智能清理与撤销历史。100% 本地处理，不上传任何文件。">
+    <meta name="keywords" content="文件整理,文件管理工具,Windows 整理软件,批量重命名,重复文件查找,桌面整理,自动归类,FileOrganizer Pro,文件夹整理">
+    <meta name="author" content="RHH-herry">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rhh-herry.github.io/FileOrganizer-Pro/">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="theme-color" content="#0071E3">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FileOrganizer Pro">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="FileOrganizer Pro — Windows 智能文件整理工具（免费下载·v1.2.0 正式版）">
+    <meta property="og:description" content="FileOrganizer Pro 是一款苹果风格的 Windows 文件整理工具：一键按类型/日期/名称智能归类，支持自定义规则引擎、批量重命名、重复文件检测、智能清理与撤销历史。100% 本地处理，不上传任何文件。">
+    <meta property="og:url" content="https://rhh-herry.github.io/FileOrganizer-Pro/">
+    <meta property="og:image" content="https://rhh-herry.github.io/FileOrganizer-Pro/images/banner.png">
+    <meta property="og:image:width" content="1216">
+    <meta property="og:image:height" content="832">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FileOrganizer Pro — Windows 智能文件整理工具（免费下载·v1.2.0 正式版）">
+    <meta name="twitter:description" content="FileOrganizer Pro 是一款苹果风格的 Windows 文件整理工具：一键按类型/日期/名称智能归类，支持自定义规则引擎、批量重命名、重复文件检测、智能清理与撤销历史。100% 本地处理，不上传任何文件。">
+    <meta name="twitter:image" content="https://rhh-herry.github.io/FileOrganizer-Pro/images/banner.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FileOrganizer Pro",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "softwareVersion": "1.2.0",
+  "datePublished": "2026-08-08",
+  "downloadUrl": "https://github.com/RHH-herry/FileOrganizer-Pro/releases/download/v1.2.0/FileOrganizer_Pro_v1.2.0_Setup.exe",
+  "installUrl": "https://github.com/RHH-herry/FileOrganizer-Pro/releases/latest",
+  "fileSize": "80MB",
+  "inLanguage": "zh-CN",
+  "description": "苹果风格的 Windows 智能文件整理工具，支持按类型/日期/名称自动归类、自定义规则、批量重命名、重复文件检测与智能清理，全部本地处理不上传。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+  "author": { "@type": "Person", "name": "RHH-herry" }
+}
+</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0071E3;
+            --primary-hover: #0077ED;
+            --primary-soft: rgba(0,113,227,0.08);
+            --secondary: #34C759;
+            --accent: #5856D6;
+            --accent-2: #FF9500;
+            --text: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --text-muted: #8E8E93;
+            --bg: #FFFFFF;
+            --bg-alt: #F5F5F7;
+            --bg-card: #FFFFFF;
+            --border: #E5E5EA;
+            --border-light: #F0F0F5;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05), 0 1px 1px rgba(0,0,0,0.03);
+            --shadow: 0 4px 18px rgba(0,0,0,0.045), 0 2px 10px rgba(0,0,0,0.03);
+            --shadow-md: 0 14px 38px rgba(0,0,0,0.07), 0 7px 20px rgba(0,0,0,0.04);
+            --shadow-lg: 0 28px 72px rgba(0,0,0,0.09), 0 14px 36px rgba(0,0,0,0.05);
+            --shadow-xl: 0 44px 110px rgba(0,0,0,0.13), 0 22px 56px rgba(0,0,0,0.08);
+            --radius: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+            --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            /* Liquid Glass Tokens */
+            --lg-bg: rgba(255, 255, 255, 0.38);
+            --lg-bg-hover: rgba(255, 255, 255, 0.58);
+            --lg-blur: 40px;
+            --lg-saturate: 220%;
+            --lg-border: rgba(255, 255, 255, 0.35);
+            --lg-border-hover: rgba(255, 255, 255, 0.55);
+            --lg-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 4px 16px rgba(0,0,0,0.03), 0 12px 40px rgba(0,0,0,0.04), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -1px 1px rgba(0,0,0,0.02);
+            --lg-shadow-hover: 0 4px 12px rgba(0,0,0,0.04), 0 12px 48px rgba(0,0,0,0.08), 0 24px 72px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.7), inset 0 -1px 1px rgba(0,0,0,0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            letter-spacing: -0.02em;
+            overflow-x: hidden;
+            font-feature-settings: 'cv11', 'ss01', 'ss03', 'kern';
+            font-variant-ligatures: common-ligatures;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        ::-webkit-scrollbar { width: 9px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.015); margin: 4px; }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.12);
+            border-radius: 6px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            transition: background 0.25s var(--ease);
+        }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.22); background-clip: padding-box; border: 2px solid transparent; }
+        ::selection { background: rgba(0, 113, 227, 0.18); color: var(--text); }
+        
+        :focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        
+        @media (hover: hover) {
+            * { transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, opacity 0.25s ease, color 0.25s ease; }
+        }
+
+        /* === Liquid Glass System === */
+        .lg {
+            position: relative;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            z-index: 1;
+            box-shadow: var(--lg-shadow);
+        }
+        .lg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, 
+                rgba(255,255,255,0.6) 0%, 
+                rgba(255,255,255,0.25) 12%, 
+                rgba(255,255,255,0.08) 28%,
+                transparent 42%,
+                rgba(255,255,255,0.03) 55%,
+                rgba(255,255,255,0.1) 70%,
+                rgba(255,255,255,0.2) 85%,
+                rgba(255,255,255,0.35) 100%
+            );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .lg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 55%;
+            border-radius: inherit;
+            background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.08) 35%, transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .lg > * { position: relative; z-index: 1; }
+        .lg-hover:hover {
+            background: var(--lg-bg-hover) !important;
+            border-color: var(--lg-border-hover) !important;
+            box-shadow: var(--lg-shadow-hover) !important;
+        }
+
+        /* === Glass Noise Texture (CSS-only, lightweight) === */
+        .glass-noise {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 128px 128px;
+            mix-blend-mode: overlay;
+        }
+
+        /* === Chromatic Aberration on Glass Edges === */
+        .glass-chromatic {
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 0;
+            background: linear-gradient(135deg,
+                rgba(0,113,227,0.1) 0%,
+                rgba(88,86,214,0.05) 12%,
+                transparent 28%,
+                transparent 72%,
+                rgba(88,86,214,0.06) 88%,
+                rgba(0,113,227,0.08) 100%
+            );
+            filter: blur(1.5px);
+        }
+
+        /* === Glass Caustics - Light Refraction Spots === */
+        .glass-caustics {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.04;
+            background:
+                radial-gradient(ellipse at 25% 25%, rgba(0,113,227,0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 75% 75%, rgba(88,86,214,0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(52,199,89,0.2) 0%, transparent 40%);
+            mix-blend-mode: overlay;
+            animation: glassBreathe 8s ease-in-out infinite;
+        }
+        @keyframes glassBreathe {
+            0%, 100% { opacity: 0.03; }
+            50% { opacity: 0.06; }
+        }
+
+        /* === Glass Edge Highlight - Gradient Border Glow === */
+        .glass-edge {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 2;
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.15), rgba(255,255,255,0.05), rgba(255,255,255,0.3)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        /* === Glass Iridescent Border - Color-shifting edge === */
+        .glass-iridescent {
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 3;
+            border: 1px solid transparent;
+            background: conic-gradient(from 180deg, rgba(0,113,227,0.15), rgba(88,86,214,0.12), rgba(52,199,89,0.1), rgba(255,149,0,0.08), rgba(0,113,227,0.15)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.6s var(--ease);
+        }
+        .feature-card:hover .glass-iridescent,
+        .showcase-card:hover .glass-iridescent,
+        .pro-card:hover .glass-iridescent,
+        .req-card:hover .glass-iridescent,
+        .download-card:hover .glass-iridescent,
+        .contact-card:hover .glass-iridescent,
+        .version-card:hover .glass-iridescent,
+        .policy-card:hover .glass-iridescent {
+            opacity: 1;
+        }
+
+        /* === Glass Inner Glow on Hover === */
+        .glass-inner-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s var(--ease);
+            background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.15) 0%, transparent 60%);
+        }
+        .feature-card:hover .glass-inner-glow,
+        .showcase-card:hover .glass-inner-glow,
+        .pro-card:hover .glass-inner-glow,
+        .req-card:hover .glass-inner-glow,
+        .download-card:hover .glass-inner-glow,
+        .contact-card:hover .glass-inner-glow,
+        .version-card:hover .glass-inner-glow,
+        .policy-card:hover .glass-inner-glow {
+            opacity: 1;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+        .section { padding: 120px 0; }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 36px;
+            background: linear-gradient(135deg, var(--primary), rgba(0,113,227,0.9));
+            color: #fff;
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s var(--ease);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,113,227,0.25);
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.6s var(--ease);
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.7s, height 0.7s;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-hover), rgba(0,113,227,0.95));
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 113, 227, 0.45);
+        }
+        .btn-primary:hover::before { left: 100%; }
+        .btn-primary:hover::after {
+            width: 350px;
+            height: 350px;
+        }
+        .btn-primary:active { transform: translateY(-1px) scale(0.98); }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 15px 36px;
+            background: rgba(255,255,255,0.85);
+            color: var(--primary);
+            border: 1.5px solid rgba(0,113,227,0.15);
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s var(--ease);
+            position: relative;
+            backdrop-filter: blur(8px);
+        }
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-full);
+            background: linear-gradient(135deg, rgba(0,113,227,0.08), transparent);
+            opacity: 0;
+            transition: opacity 0.3s var(--ease);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.95);
+            border-color: rgba(0, 113, 227, 0.45);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 113, 227, 0.15);
+        }
+        .btn-secondary:hover::before { opacity: 1; }
+        .btn-secondary:active { transform: translateY(-1px) scale(0.98); }
+
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 0 48px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.48);
+            backdrop-filter: saturate(200%) blur(40px);
+            -webkit-backdrop-filter: saturate(200%) blur(40px);
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+            transition: all 0.5s var(--ease);
+        }
+        .nav::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 30%, transparent 55%, rgba(255,255,255,0.15) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .nav > * { position: relative; z-index: 1; }
+        .nav.scrolled {
+            background: rgba(255,255,255,0.82);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.4);
+            border-bottom-color: rgba(255,255,255,0.35);
+            height: 64px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+        }
+        .nav-logo:hover { opacity: 0.92; transform: translateY(-1px); }
+        .nav-logo img { 
+            width: 34px; 
+            height: 34px; 
+            border-radius: 10px;
+            transition: transform 0.5s var(--spring), box-shadow 0.4s var(--ease);
+            box-shadow: 0 2px 8px rgba(0,113,227,0.12);
+        }
+        .nav-logo:hover img { 
+            transform: scale(1.08) rotate(3deg); 
+            box-shadow: 0 4px 14px rgba(0,113,227,0.25);
+        }
+        .nav-logo span { font-weight: 700; font-size: 16px; letter-spacing: -0.3px; }
+        .nav-links { display: flex; gap: 36px; align-items: center; }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.3s var(--ease), opacity 0.3s var(--ease);
+            position: relative;
+            opacity: 0.9;
+        }
+        .nav-links a:hover { color: var(--text); opacity: 1; }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px; left: 50%;
+            width: 0; height: 2px;
+            background: var(--primary);
+            border-radius: 1px;
+            transition: width 0.35s var(--ease), left 0.35s var(--ease);
+            transform: translateX(-50%);
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-btn svg { width: 26px; height: 26px; color: var(--text); }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 64px 48px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -500px; left: -300px;
+            width: 1400px; height: 1400px;
+            background:
+                radial-gradient(circle, rgba(0,113,227,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 30% 30%, rgba(88,86,214,0.07) 0%, transparent 40%);
+            border-radius: 50%;
+            animation: floatGradient 35s ease-in-out infinite;
+            z-index: 0;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -500px; right: -300px;
+            width: 1200px; height: 1200px;
+            background:
+                radial-gradient(circle, rgba(52,199,89,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255,149,0,0.05) 0%, transparent 40%);
+            border-radius: 50%;
+            animation: floatGradient 28s ease-in-out infinite reverse;
+            z-index: 0;
+        }
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .hero-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(0,113,227,0.4);
+            border-radius: 50%;
+            animation: particleFloat 18s ease-in-out infinite;
+            will-change: transform, opacity;
+            box-shadow: 0 0 10px rgba(0,113,227,0.3);
+        }
+        .hero-particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; animation-duration: 20s; }
+        .hero-particle:nth-child(2) { left: 25%; top: 60%; animation-delay: 2s; animation-duration: 24s; background: rgba(52,199,89,0.4); box-shadow: 0 0 10px rgba(52,199,89,0.3); }
+        .hero-particle:nth-child(3) { left: 70%; top: 30%; animation-delay: 4s; animation-duration: 18s; }
+        .hero-particle:nth-child(4) { left: 85%; top: 70%; animation-delay: 1s; animation-duration: 22s; background: rgba(52,199,89,0.3); box-shadow: 0 0 8px rgba(52,199,89,0.25); }
+        .hero-particle:nth-child(5) { left: 50%; top: 80%; animation-delay: 3s; animation-duration: 26s; }
+        .hero-particle:nth-child(6) { left: 15%; top: 85%; animation-delay: 5s; animation-duration: 21s; background: rgba(88,86,214,0.3); box-shadow: 0 0 8px rgba(88,86,214,0.25); }
+        .hero-particle:nth-child(7) { left: 60%; top: 15%; animation-delay: 6s; animation-duration: 23s; background: rgba(255,149,0,0.3); box-shadow: 0 0 8px rgba(255,149,0,0.25); }
+
+        /* === Floating Glass Orbs === */
+        .hero-glass-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 30%, transparent 60%);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: inset 0 1px 2px rgba(255,255,255,0.3), 0 4px 20px rgba(0,0,0,0.04);
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+        .hero-glass-orb:nth-child(1) { width: 80px; height: 80px; left: 8%; top: 15%; animation-delay: 0s; animation-duration: 22s; }
+        .hero-glass-orb:nth-child(2) { width: 50px; height: 50px; right: 12%; top: 25%; animation-delay: 3s; animation-duration: 18s; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.2) 0%, rgba(88,86,214,0.05) 30%, transparent 60%); border-color: rgba(88,86,214,0.1); }
+        .hero-glass-orb:nth-child(3) { width: 35px; height: 35px; left: 45%; bottom: 20%; animation-delay: 6s; animation-duration: 25s; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.2) 0%, rgba(52,199,89,0.05) 30%, transparent 60%); border-color: rgba(52,199,89,0.1); }
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+            25% { transform: translate(20px, -30px) scale(1.1); opacity: 0.8; }
+            50% { transform: translate(-10px, -50px) scale(0.9); opacity: 0.5; }
+            75% { transform: translate(15px, -20px) scale(1.05); opacity: 0.7; }
+        }
+        @keyframes floatGradient {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            25% { transform: translate(40px, -40px) scale(1.1) rotate(3deg); }
+            50% { transform: translate(20px, 20px) scale(0.94) rotate(-2deg); }
+            75% { transform: translate(-30px, 15px) scale(1.06) rotate(2deg); }
+        }
+        @keyframes particleFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+            25% { transform: translate(25px, -35px) scale(1.4); opacity: 0.9; }
+            50% { transform: translate(-15px, -55px) scale(0.7); opacity: 0.3; }
+            75% { transform: translate(20px, -25px) scale(1.2); opacity: 0.7; }
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            max-width: 1240px;
+            width: 100%;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        .hero-left { text-align: left; }
+        .hero-right { display: flex; align-items: center; justify-content: center; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin-bottom: 44px;
+            animation: badgeEnter 0.9s var(--spring) 0.3s both;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 30%, transparent 55%, rgba(255,255,255,0.15) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-badge > * { position: relative; z-index: 1; }
+        .hero-badge .dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--secondary);
+            box-shadow: 0 0 12px rgba(52,199,89,0.7);
+            animation: dotPulse 2.5s ease-in-out infinite;
+        }
+        @keyframes badgeEnter { from { opacity: 0; transform: translateY(-18px) scale(0.88); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes dotPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+
+        .hero-title {
+            font-size: clamp(52px, 6.5vw, 88px);
+            font-weight: 800;
+            line-height: 0.98;
+            margin-bottom: 22px;
+            letter-spacing: -2.8px;
+            animation: titleReveal 1.1s var(--ease-out) 0.3s both;
+        }
+        .hero-title span:first-child { color: var(--text); display: block; }
+        .hero-title span:last-child {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: block;
+        }
+        @keyframes titleReveal { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
+        .hero-subtitle {
+            font-size: clamp(17px, 1.6vw, 21px);
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 0 0 44px;
+            line-height: 1.55;
+            font-weight: 400;
+            animation: fadeUp 0.9s var(--ease) 0.5s both;
+        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
+        .hero-stats {
+            display: flex;
+            justify-content: flex-start;
+            gap: 56px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            animation: fadeUp 0.8s var(--ease) 0.6s both;
+            border-radius: var(--radius-lg);
+            padding: 24px 32px;
+            /* Liquid Glass */
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+        }
+        .hero-stats::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.15) 25%, transparent 45%, rgba(255,255,255,0.06) 65%, rgba(255,255,255,0.2) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-stats > * { position: relative; z-index: 1; }
+        .stat { text-align: left; }
+        .stat-value {
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--text);
+            display: block;
+            letter-spacing: -1.5px;
+            position: relative;
+        }
+        .stat-label { 
+            font-size: 12px; 
+            color: var(--text-muted); 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            margin-top: 16px;
+            font-weight: 600;
+        }
+
+        .hero-logo-wrapper {
+            position: relative;
+            width: 340px;
+            height: 340px;
+            animation: fadeUp 1s var(--ease-out) 0.6s both;
+            will-change: transform, opacity;
+        }
+        .hero-logo-glow {
+            position: absolute;
+            inset: -80px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,113,227,0.12) 0%, rgba(52,199,89,0.06) 40%, transparent 70%);
+            filter: blur(60px);
+            animation: glowPulse 5s ease-in-out infinite;
+        }
+        @keyframes glowPulse { 
+            0%,100%{opacity:0.6;transform:scale(1) rotate(0deg)} 
+            50%{opacity:1;transform:scale(1.15) rotate(3deg)} 
+        }
+        .hero-logo {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 72px;
+            overflow: hidden;
+            box-shadow: 0 50px 130px rgba(0,113,227,0.25), 0 20px 50px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.3);
+            animation: logoFloat 10s ease-in-out infinite;
+            transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+        }
+        .hero-logo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 50%);
+            pointer-events: none;
+        }
+        .hero-logo:hover {
+            transform: scale(1.04) rotate(1.5deg);
+            box-shadow: 0 70px 160px rgba(0,113,227,0.35), 0 30px 70px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.4);
+        }
+        @keyframes logoFloat { 
+            0%,100%{transform:translateY(0) rotate(0deg)} 
+            25%{transform:translateY(-6px) rotate(0.5deg)} 
+            75%{transform:translateY(-10px) rotate(-0.5deg)} 
+        }
+        .hero-logo img { width: 100%; height: 100%; object-fit: cover; }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            animation: fadeUp 1s var(--ease-out) 0.9s both;
+        }
+
+        .section-header { text-align: center; margin-bottom: 88px; }
+        .section-label {
+            display: inline-block;
+            padding: 7px 20px;
+            border-radius: var(--radius-full);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            background: var(--lg-bg);
+            backdrop-filter: blur(calc(var(--lg-blur) - 4px));
+            -webkit-backdrop-filter: blur(calc(var(--lg-blur) - 4px));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .section-label::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 30%, transparent 55%, rgba(255,255,255,0.15) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .section-label > * { position: relative; z-index: 1; }
+        .section-title {
+            font-size: clamp(44px, 6vw, 72px);
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: -2.2px;
+            line-height: 1.02;
+        }
+        .section-subtitle {
+            font-size: clamp(17px, 1.6vw, 21px);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.55;
+            font-weight: 400;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            perspective: 1200px;
+        }
+        .feature-card {
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            border-radius: var(--radius-lg);
+            padding: 60px;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: var(--lg-shadow);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.15) 25%, transparent 45%, rgba(255,255,255,0.06) 65%, rgba(255,255,255,0.2) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: -65%; right: -40%;
+            width: 420px; height: 420px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+            transform: scale(0.6);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .feature-card > * { position: relative; z-index: 1; }
+        .feature-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-12px);
+        }
+        .feature-card:hover::after { 
+            opacity: 1; 
+            transform: scale(1.2);
+        }
+        /* === Hover gradient tint per card === */
+        .feature-card:nth-child(1):hover { background: linear-gradient(135deg, rgba(0,113,227,0.08), rgba(255,255,255,0.55)); }
+        .feature-card:nth-child(2):hover { background: linear-gradient(135deg, rgba(88,86,214,0.08), rgba(255,255,255,0.55)); }
+        .feature-card:nth-child(3):hover { background: linear-gradient(135deg, rgba(255,149,0,0.08), rgba(255,255,255,0.55)); }
+        .feature-card:nth-child(4):hover { background: linear-gradient(135deg, rgba(52,199,89,0.08), rgba(255,255,255,0.55)); }
+        .feature-card:nth-child(1)::after { background: radial-gradient(circle, rgba(0,113,227,0.12), transparent 65%); }
+        .feature-card:nth-child(2)::after { background: radial-gradient(circle, rgba(88,86,214,0.12), transparent 65%); }
+        .feature-card:nth-child(3)::after { background: radial-gradient(circle, rgba(255,149,0,0.12), transparent 65%); }
+        .feature-card:nth-child(4)::after { background: radial-gradient(circle, rgba(52,199,89,0.12), transparent 65%); }
+
+        .feature-icon {
+            width: 64px; height: 64px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            transition: transform 0.7s var(--spring), box-shadow 0.7s var(--ease);
+            position: relative;
+            z-index: 2;
+        }
+        .feature-card:hover .feature-icon { transform: scale(1.14) translateY(-3px); }
+        .feature-icon svg { width: 30px; height: 30px; }
+        .feature-title {
+            font-size: 23px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.7px;
+            position: relative;
+            z-index: 2;
+            transition: color 0.5s var(--ease);
+        }
+        .feature-card:hover .feature-title { color: var(--primary); }
+        .feature-desc {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.58;
+            position: relative;
+            z-index: 2;
+        }
+
+        .showcase { background: var(--bg-alt); }
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            perspective: 1200px;
+        }
+        .showcase-card {
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border-radius: var(--radius-lg);
+            padding: 52px;
+            text-align: center;
+            border: 1px solid var(--lg-border);
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: var(--lg-shadow);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        .showcase-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 25%, transparent 45%, rgba(255,255,255,0.06) 65%, rgba(255,255,255,0.18) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .showcase-card > * { position: relative; z-index: 1; }
+        .showcase-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-12px) scale(1.025);
+        }
+        .showcase-card:nth-child(1):hover { background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(255,255,255,0.55)); }
+        .showcase-card:nth-child(2):hover { background: linear-gradient(135deg, rgba(88,86,214,0.06), rgba(255,255,255,0.55)); }
+        .showcase-card:nth-child(3):hover { background: linear-gradient(135deg, rgba(52,199,89,0.06), rgba(255,255,255,0.55)); }
+        .showcase-card:nth-child(4):hover { background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(255,255,255,0.55)); }
+        .showcase-card:nth-child(5):hover { background: linear-gradient(135deg, rgba(255,149,0,0.06), rgba(255,255,255,0.55)); }
+        .showcase-card:nth-child(6):hover { background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(255,255,255,0.55)); }
+        .showcase-icon {
+            width: 64px; height: 64px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            transition: transform 0.7s var(--spring), box-shadow 0.7s var(--ease);
+        }
+        .showcase-card:hover .showcase-icon { transform: scale(1.25) translateY(-6px); }
+        .showcase-icon svg { width: 28px; height: 28px; }
+        .showcase-title { 
+            font-size: 19px; 
+            font-weight: 800; 
+            margin-bottom: 12px;
+            letter-spacing: -0.4px;
+            transition: color 0.4s var(--ease);
+        }
+        .showcase-card:hover .showcase-title { color: var(--primary); }
+        .showcase-desc { 
+            font-size: 15px; 
+            color: var(--text-secondary);
+            line-height: 1.62;
+        }
+
+        .pro-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 72px;
+            perspective: 1200px;
+        }
+        .pro-card {
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            border-radius: var(--radius-lg);
+            padding: 44px;
+            text-align: center;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: var(--lg-shadow);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        .pro-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 25%, transparent 45%, rgba(255,255,255,0.06) 65%, rgba(255,255,255,0.18) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .pro-card > * { position: relative; z-index: 1; }
+        .pro-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-10px) scale(1.04);
+        }
+        .pro-card:nth-child(1):hover { background: linear-gradient(135deg, rgba(0,113,227,0.07), rgba(255,255,255,0.55)); }
+        .pro-card:nth-child(2):hover { background: linear-gradient(135deg, rgba(88,86,214,0.07), rgba(255,255,255,0.55)); }
+        .pro-card:nth-child(3):hover { background: linear-gradient(135deg, rgba(255,149,0,0.07), rgba(255,255,255,0.55)); }
+        .pro-card:nth-child(4):hover { background: linear-gradient(135deg, rgba(52,199,89,0.07), rgba(255,255,255,0.55)); }
+        .pro-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 24px;
+            background: rgba(0,113,227,0.07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            transition: all 0.6s var(--spring);
+        }
+        .pro-card:hover .pro-icon {
+            transform: scale(1.15) translateY(-3px);
+            background: rgba(0,113,227,0.14);
+        }
+        .pro-title {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+        .pro-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .pro-highlight {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            padding: 48px;
+            border-radius: var(--radius-xl);
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .pro-highlight::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 35%, transparent 55%, rgba(255,255,255,0.1) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .pro-highlight > * { position: relative; z-index: 1; }
+        .pro-highlight-content h3 {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .pro-highlight-content p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .pro-highlight-stats {
+            display: flex;
+            gap: 48px;
+        }
+        .pro-highlight-stats div {
+            text-align: left;
+        }
+        .pro-hl-value {
+            display: block;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        .pro-hl-label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+        .pro-highlight-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 32px;
+            perspective: 1200px;
+        }
+        .req-card { 
+            border-radius: var(--radius-lg);
+            padding: 44px;
+            transition: all 0.3s var(--ease);
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .req-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 35%, transparent 55%, rgba(255,255,255,0.1) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .req-card > * { position: relative; z-index: 1; }
+        .req-card:hover { box-shadow: var(--lg-shadow-hover); }
+        .req-card.highlight {
+            background: var(--lg-bg);
+            border-color: rgba(0,113,227,0.18);
+        }
+        .req-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+        .req-header-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--lg-bg);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--lg-border);
+            position: relative;
+            overflow: hidden;
+        }
+        .req-header-icon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 30%, transparent 55%, rgba(255,255,255,0.15) 100%);
+            pointer-events: none;
+        }
+        .req-header-icon svg { position: relative; z-index: 1; }
+        .req-card.highlight .req-header-icon {
+            border-color: rgba(0,113,227,0.25);
+        }
+        .req-header h3 { font-size: 18px; font-weight: 800; }
+        .req-card.highlight .req-header h3 { color: var(--primary); }
+        .req-header p { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+        .req-list { list-style: none; }
+        .req-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            background: var(--bg-alt);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            transition: all 0.25s var(--ease);
+        }
+        .req-item:hover { 
+            background: rgba(0,113,227,0.05);
+            transform: translateX(4px);
+        }
+        .req-item svg { width: 18px; height: 18px; opacity: 0.4; flex-shrink: 0; }
+        .req-card.highlight .req-item svg { opacity: 0.6; }
+        .req-item-label { font-size: 14px; font-weight: 600; }
+        .req-item-val { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+        .req-note {
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: box-shadow 0.3s var(--ease), background 0.3s var(--ease);
+            position: relative;
+            overflow: hidden;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+        }
+        .req-note::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 35%, transparent 55%, rgba(255,255,255,0.1) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .req-note > * { position: relative; z-index: 1; }
+        .req-note:hover { box-shadow: var(--lg-shadow-hover); background: var(--lg-bg-hover); }
+        .req-note-icon {
+            width: 52px; height: 52px;
+            border-radius: 16px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s var(--spring);
+        }
+        .req-note:hover .req-note-icon { transform: scale(1.08); }
+        .req-note-icon svg { width: 24px; height: 24px; color: #fff; }
+        .req-note h4 { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+        .req-note p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+        .download-card {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 96px 80px;
+            text-align: center;
+            border-radius: var(--radius-xl);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.7s var(--ease), box-shadow 0.7s var(--ease), background 0.7s var(--ease), border-color 0.7s var(--ease);
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.04), 0 24px 64px rgba(0,0,0,0.06), 0 48px 120px rgba(0,0,0,0.08), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -1px 1px rgba(0,0,0,0.02);
+        }
+        .download-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.18) 25%, transparent 45%, rgba(255,255,255,0.08) 65%, rgba(255,255,255,0.25) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .download-card > * { position: relative; z-index: 1; }
+        .download-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.06), 0 32px 80px rgba(0,0,0,0.08), 0 56px 140px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.7), inset 0 -1px 1px rgba(0,0,0,0.03);
+            transform: translateY(-8px) scale(1.01);
+        }
+        .download-card-glow {
+            position: absolute;
+            top: -300px; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 600px;
+            background: radial-gradient(ellipse, rgba(0,113,227,0.06) 0%, transparent 70%);
+            animation: cardGlow 8s ease-in-out infinite;
+        }
+        @keyframes cardGlow {
+            0%,100%{opacity:0.6;transform:translateX(-50%) scale(1)}
+            50%{opacity:1;transform:translateX(-50%) scale(1.05)}
+        }
+        .dl-logo {
+            width: 130px; height: 130px;
+            border-radius: 34px;
+            margin: 0 auto 32px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0,113,227,0.2);
+            animation: logoFloat 8s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+        }
+        .download-card:hover .dl-logo {
+            transform: scale(1.05);
+            box-shadow: 0 30px 80px rgba(0,113,227,0.25);
+        }
+        .dl-logo img { width: 100%; height: 100%; object-fit: cover; }
+        .dl-title { font-size: 36px; font-weight: 900; margin-bottom: 8px; letter-spacing: -1.5px; position: relative; z-index: 2; }
+        .dl-version { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; position: relative; z-index: 2; }
+        .dl-price {
+            font-size: 72px;
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -3px;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+            animation: priceShimmer 5s ease-in-out infinite;
+        }
+        @keyframes priceShimmer {
+            0%,100%{filter:brightness(1)}
+            50%{filter:brightness(1.1)}
+        }
+        .dl-tagline { font-size: 14px; color: var(--text-secondary); margin-bottom: 48px; position: relative; z-index: 2; }
+
+        .dl-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 48px;
+            position: relative;
+            z-index: 2;
+        }
+        .dl-stat {
+            padding: 24px 12px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: all 0.4s var(--ease);
+            position: relative;
+            overflow: hidden;
+            background: var(--lg-bg);
+            backdrop-filter: blur(calc(var(--lg-blur) - 4px));
+            -webkit-backdrop-filter: blur(calc(var(--lg-blur) - 4px));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+        }
+        .dl-stat::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 30%, transparent 55%, rgba(255,255,255,0.15) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .dl-stat > * { position: relative; z-index: 1; }
+        .dl-stat:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-6px);
+        }
+        .dl-stat-value { 
+            font-size: 28px; 
+            font-weight: 900; 
+            color: var(--primary); 
+            display: block;
+            letter-spacing: -1px;
+        }
+        .dl-stat-label { 
+            font-size: 11px; 
+            color: var(--text-muted); 
+            display: block;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .dl-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            max-width: 560px;
+            padding: 32px 64px;
+            border-radius: var(--radius-full);
+            background: linear-gradient(135deg, var(--primary), rgba(0,113,227,0.92));
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 20px 60px rgba(0,113,227,0.45);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 32px;
+            transition: all 0.6s var(--ease);
+            z-index: 2;
+            letter-spacing: -0.4px;
+        }
+        .dl-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.8s var(--ease);
+        }
+        .dl-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 1s, height 1s;
+        }
+        .dl-btn:hover {
+            background: linear-gradient(135deg, var(--primary-hover), rgba(0,113,227,0.96));
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0,113,227,0.6);
+        }
+        .dl-btn:hover::before { left: 100%; }
+        .dl-btn:hover::after {
+            width: 500px;
+            height: 500px;
+        }
+        .dl-btn:active { transform: translateY(-3px) scale(0.99); }
+        .dl-btn svg { position: relative; z-index: 2; transition: transform 0.5s var(--spring); }
+        .dl-btn:hover svg { transform: translateY(5px); }
+
+        .dl-alt { font-size: 13px; color: var(--text-muted); position: relative; z-index: 2; }
+        .dl-alt a { color: var(--primary); text-decoration: none; font-weight: 600; transition: color 0.3s var(--ease); }
+        .dl-alt a:hover { color: var(--primary-hover); text-decoration: underline; }
+
+        footer {
+            padding: 36px 0 28px;
+            text-align: center;
+            background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+        }
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            margin-bottom: 18px;
+            font-size: 15px;
+            letter-spacing: -0.2px;
+        }
+        .footer-logo img { 
+            width: 32px; height: 32px; 
+            border-radius: 8px;
+            transition: transform 0.3s var(--spring);
+        }
+        .footer-logo:hover img { transform: scale(1.08); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+        .footer-links a {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s var(--ease);
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-legal {
+            padding: 18px 24px;
+            border-radius: var(--radius-lg);
+            margin-bottom: 18px;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-legal::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 35%, transparent 55%, rgba(255,255,255,0.1) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .footer-legal > * { position: relative; z-index: 1; }
+        .footer-legal h4 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .footer-legal p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: left;
+        }
+        .footer-copy { font-size: 11px; color: var(--text-muted); }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px) scale(0.96);
+            transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out);
+        }
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.25s; }
+        .reveal-delay-3 { transition-delay: 0.35s; }
+        .reveal-delay-4 { transition-delay: 0.45s; }
+        .reveal-delay-5 { transition-delay: 0.55s; }
+
+        /* === Scroll Progress Bar === */
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            z-index: 9999;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 12px rgba(0,113,227,0.5);
+        }
+
+        /* === Back to Top Button === */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px; right: 32px;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px) scale(0.8);
+            transition: opacity 0.4s var(--ease), transform 0.4s var(--spring), background 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+        }
+        .back-to-top:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-4px) scale(1.08);
+        }
+        .back-to-top:active { transform: translateY(-1px) scale(0.96); }
+        .back-to-top svg { width: 20px; height: 20px; color: var(--primary); }
+        @media (max-width: 600px) {
+            .back-to-top { bottom: 20px; right: 20px; width: 42px; height: 42px; }
+        }
+
+        /* === Tilt micro-interaction === */
+        .tilt { transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); will-change: transform; }
+        .tilt-glare {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s var(--ease);
+            z-index: 3;
+        }
+        .tilt-glare.active { opacity: 1; }
+
+        /* === Page Loading Splash === */
+        .page-splash {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            transition: opacity 0.6s var(--ease), visibility 0.6s var(--ease);
+        }
+        .page-splash.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .splash-logo {
+            width: 64px; height: 64px;
+            border-radius: 18px;
+            animation: splashPulse 1.2s var(--ease) infinite;
+            box-shadow: 0 12px 40px rgba(0,113,227,0.3);
+        }
+        @keyframes splashPulse {
+            0%,100% { transform: scale(1); box-shadow: 0 12px 40px rgba(0,113,227,0.3); }
+            50% { transform: scale(1.08); box-shadow: 0 16px 50px rgba(0,113,227,0.45); }
+        }
+        .splash-bar {
+            width: 120px; height: 3px;
+            border-radius: 3px;
+            background: rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+        .splash-bar-inner {
+            height: 100%;
+            width: 0%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            animation: splashLoad 1s var(--ease-out) forwards;
+        }
+        @keyframes splashLoad { to { width: 100%; } }
+
+        /* === Shimmer on cards === */
+        .shimmer {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -120%;
+            width: 80%; height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 15%, rgba(255,255,255,0.18) 40%, rgba(255,255,255,0.06) 65%, transparent 100%);
+            transition: left 0.8s var(--ease);
+        }
+        .feature-card:hover .shimmer::after,
+        .showcase-card:hover .shimmer::after,
+        .pro-card:hover .shimmer::after,
+        .req-card:hover .shimmer::after,
+        .version-card:hover .shimmer::after,
+        .policy-card:hover .shimmer::after {
+            left: 140%;
+        }
+
+        /* === Nav active section indicator === */
+        .nav-links a.active {
+            color: var(--text);
+            opacity: 1;
+        }
+        .nav-links a.active::after {
+            width: 100%;
+            background: var(--primary);
+        }
+
+        /* === Button ripple === */
+        .btn-ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.35);
+            transform: scale(0);
+            animation: ripple 0.6s ease-out;
+            pointer-events: none;
+        }
+        @keyframes ripple { to { transform: scale(4); opacity: 0; } }
+
+        /* === Staggered reveal for grid children === */
+        .features-grid .feature-card:nth-child(1) { transition-delay: 0s; }
+        .features-grid .feature-card:nth-child(2) { transition-delay: 0.08s; }
+        .features-grid .feature-card:nth-child(3) { transition-delay: 0.16s; }
+        .features-grid .feature-card:nth-child(4) { transition-delay: 0.24s; }
+        .showcase-grid .showcase-card:nth-child(1) { transition-delay: 0s; }
+        .showcase-grid .showcase-card:nth-child(2) { transition-delay: 0.06s; }
+        .showcase-grid .showcase-card:nth-child(3) { transition-delay: 0.12s; }
+        .showcase-grid .showcase-card:nth-child(4) { transition-delay: 0.18s; }
+        .showcase-grid .showcase-card:nth-child(5) { transition-delay: 0.24s; }
+        .showcase-grid .showcase-card:nth-child(6) { transition-delay: 0.30s; }
+        .pro-grid .pro-card:nth-child(1) { transition-delay: 0s; }
+        .pro-grid .pro-card:nth-child(2) { transition-delay: 0.06s; }
+        .pro-grid .pro-card:nth-child(3) { transition-delay: 0.12s; }
+        .pro-grid .pro-card:nth-child(4) { transition-delay: 0.18s; }
+        .dl-stats .dl-stat:nth-child(1) { transition-delay: 0s; }
+        .dl-stats .dl-stat:nth-child(2) { transition-delay: 0.06s; }
+        .dl-stats .dl-stat:nth-child(3) { transition-delay: 0.12s; }
+        .dl-stats .dl-stat:nth-child(4) { transition-delay: 0.18s; }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            animation: fadeInUp 1s var(--ease) 1.4s both;
+            cursor: pointer;
+            z-index: 10;
+            transition: opacity 0.4s var(--ease);
+        }
+        .scroll-indicator:hover { opacity: 0.85; }
+        .scroll-indicator span {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .scroll-indicator svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-muted);
+            animation: bounce 2s ease-in-out infinite;
+        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        .contact { background: var(--bg-alt); }
+        .contact-card {
+            max-width: 720px;
+            margin: 0 auto;
+            border-radius: var(--radius-xl);
+            padding: 80px 72px;
+            text-align: center;
+            transition: all 0.8s var(--ease);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03), 0 16px 48px rgba(0,0,0,0.05), 0 28px 72px rgba(0,0,0,0.06), inset 0 1px 1px rgba(255,255,255,0.55), inset 0 -1px 1px rgba(0,0,0,0.02);
+        }
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.15) 25%, transparent 45%, rgba(255,255,255,0.06) 65%, rgba(255,255,255,0.2) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .contact-card > * { position: relative; z-index: 1; }
+        .contact-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05), 0 24px 64px rgba(0,0,0,0.08), 0 40px 96px rgba(0,0,0,0.09), inset 0 1px 1px rgba(255,255,255,0.65), inset 0 -1px 1px rgba(0,0,0,0.03);
+            transform: translateY(-8px);
+        }
+        .contact-icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 26px;
+            background: linear-gradient(135deg, rgba(0,113,227,0.14), rgba(0,113,227,0.06));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            transition: all 0.7s var(--spring);
+        }
+        .contact-card:hover .contact-icon {
+            transform: scale(1.12) rotate(-4deg);
+            background: linear-gradient(135deg, rgba(0,113,227,0.2), rgba(0,113,227,0.1));
+        }
+        .contact-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.7px;
+        }
+        .contact-desc {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        .contact-email {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 48px;
+            letter-spacing: -0.4px;
+            transition: all 0.5s var(--ease);
+            position: relative;
+        }
+        .contact-email::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.5s var(--ease);
+        }
+        .contact-email:hover::after { transform: scaleX(1); }
+        .contact-email:hover { opacity: 0.88; }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .contact-item-icon {
+            width: 36px; height: 36px;
+            border-radius: 12px;
+            background: var(--bg-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s var(--ease);
+        }
+        .contact-card:hover .contact-item-icon {
+            background: rgba(0,113,227,0.08);
+        }
+        .contact-item-label {
+            display: block;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            text-align: left;
+        }
+        .contact-item-value {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .hero-left { text-align: center; }
+            .hero-stats { justify-content: center; }
+            .hero-actions { justify-content: center; }
+            .hero-subtitle { margin: 0 auto 32px; }
+            .hero-logo-wrapper { width: 240px; height: 240px; margin: 0 auto; }
+            .features-grid, .showcase-grid, .requirements-grid, .pro-grid { grid-template-columns: 1fr; }
+            .pro-highlight { grid-template-columns: 1fr; text-align: center; }
+            .pro-highlight-stats { justify-content: center; }
+            .pro-highlight-visual { order: -1; }
+            .container { padding: 0 20px; }
+            .section { padding: 70px 0; }
+            .nav-links { display: none; }
+            .mobile-btn { display: block; }
+            .hero-title { font-size: clamp(38px, 10vw, 60px); letter-spacing: -1.5px; }
+            .hero-stats { gap: 36px; }
+            .stat-value { font-size: 32px; }
+            .stat { text-align: center; }
+            .stat-value::after { left: 50%; transform: translateX(-50%); }
+            .download-card { padding: 48px 24px; }
+            .dl-stats { grid-template-columns: repeat(2, 1fr); }
+            .dl-price { font-size: 52px; }
+            .dl-logo { width: 110px; height: 110px; }
+            .scroll-indicator { position: static; margin-top: 40px; opacity: 1; animation: none; }
+            .feature-card, .req-card { padding: 32px; }
+            .showcase-card { padding: 32px; }
+            .pro-card { padding: 24px; }
+            .pro-highlight { padding: 32px; }
+            .contact-card { padding: 48px 32px; }
+            .contact-email { font-size: 18px; }
+            .contact-info { gap: 24px; }
+        }
+        @media (max-width: 600px) {
+            .nav { padding: 0 16px; height: 56px; }
+            .hero { padding: 56px 16px 0; }
+            .hero-badge { padding: 6px 12px; font-size: 10px; margin-bottom: 24px; }
+            .hero-subtitle { font-size: 15px; }
+            .hero-logo-wrapper { width: 200px; height: 200px; }
+            .hero-title { font-size: clamp(32px, 11vw, 48px); }
+            .hero-stats { gap: 28px; }
+            .stat-value { font-size: 28px; }
+            .dl-title { font-size: 26px; }
+            .dl-price { font-size: 44px; }
+            .feature-card, .req-card, .showcase-card { padding: 24px; }
+            .btn-primary, .btn-secondary { padding: 12px 24px; font-size: 14px; }
+            .dl-btn { padding: 20px 32px; font-size: 16px; }
+        }
+
+        /* === Steps Section === */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            perspective: 1200px;
+        }
+        .step-card {
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            border-radius: var(--radius-lg);
+            padding: 56px 44px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: var(--lg-shadow);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease);
+        }
+        .step-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.15) 25%, transparent 45%, rgba(255,255,255,0.06) 65%, rgba(255,255,255,0.2) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .step-card > * { position: relative; z-index: 1; }
+        .step-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-10px);
+        }
+        .step-card:nth-child(1):hover { background: linear-gradient(135deg, rgba(0,113,227,0.08), rgba(255,255,255,0.55)); }
+        .step-card:nth-child(2):hover { background: linear-gradient(135deg, rgba(88,86,214,0.08), rgba(255,255,255,0.55)); }
+        .step-card:nth-child(3):hover { background: linear-gradient(135deg, rgba(52,199,89,0.08), rgba(255,255,255,0.55)); }
+        .step-number {
+            font-size: 56px;
+            font-weight: 900;
+            letter-spacing: -3px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 24px;
+            line-height: 1;
+        }
+        .step-icon {
+            width: 64px; height: 64px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            background: var(--lg-bg);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--lg-border);
+            transition: transform 0.7s var(--spring);
+        }
+        .step-card:hover .step-icon { transform: scale(1.15) translateY(-3px); }
+        .step-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
+        .step-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+        .step-connector {
+            display: none;
+        }
+
+        /* === Testimonials Section === */
+        .testimonials { background: var(--bg-alt); }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            perspective: 1200px;
+        }
+        .testimonial-card {
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            border-radius: var(--radius-lg);
+            padding: 44px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--lg-shadow);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease);
+        }
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.15) 25%, transparent 45%, rgba(255,255,255,0.06) 65%, rgba(255,255,255,0.2) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .testimonial-card > * { position: relative; z-index: 1; }
+        .testimonial-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-8px);
+        }
+        .testimonial-stars {
+            font-size: 16px;
+            color: var(--accent-2);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 28px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-avatar {
+            width: 44px; height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+            color: var(--text);
+        }
+        .testimonial-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* === FAQ Section === */
+        .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+        }
+        .faq-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 30%, transparent 55%, rgba(255,255,255,0.15) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .faq-item > * { position: relative; z-index: 1; }
+        .faq-item:hover {
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+        }
+        .faq-item.open {
+            border-color: rgba(0,113,227,0.2);
+        }
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            text-align: left;
+            font-family: inherit;
+            letter-spacing: -0.2px;
+            transition: color 0.3s var(--ease);
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-question svg {
+            flex-shrink: 0;
+            transition: transform 0.4s var(--ease);
+            color: var(--text-muted);
+        }
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+        .faq-item.open .faq-question {
+            color: var(--primary);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s var(--ease), padding 0.5s var(--ease);
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer p {
+            padding: 0 28px 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* === Steps / Testimonials / FAQ responsive === */
+        @media (max-width: 900px) {
+            .steps-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .step-card, .testimonial-card { padding: 32px; }
+            .faq-question { padding: 20px 24px; font-size: 14px; }
+            .faq-answer p { padding: 0 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-splash" id="pageSplash">
+        <img class="splash-logo" src="logo.png" alt="FileOrganizer Pro">
+        <div class="splash-bar"><div class="splash-bar-inner"></div></div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <nav class="nav" id="topNav">
+        <a class="nav-logo" href="#">
+            <img src="logo.png" alt="FileOrganizer Pro">
+            <span>FileOrganizer Pro</span>
+        </a>
+        <div class="nav-links">
+            <a href="#features">功能</a>
+            <a href="#how-it-works">流程</a>
+            <a href="#showcase">特色</a>
+            <a href="#testimonials">评价</a>
+            <a href="#faq">FAQ</a>
+            <a href="#download">下载</a>
+        </div>
+        <a href="https://github.com/RHH-herry/FileOrganizer-Pro/releases/download/v1.2.0/FileOrganizer_Pro_v1.2.0_Setup.exe" class="btn-primary" id="navDownloadBtn" download>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            下载
+        </a>
+        <button class="mobile-btn" id="mobileMenuBtn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-particles">
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+        </div>
+        <div class="hero-glass-orb"></div>
+        <div class="hero-glass-orb"></div>
+        <div class="hero-glass-orb"></div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    v1.2.0 · 智能文件整理工具
+                </div>
+                <h1 class="hero-title">
+                    <span>智能整理</span>
+                    <span>井井有条</span>
+                </h1>
+                <p class="hero-subtitle">一键智能整理，让凌乱的文件夹瞬间井然有序。四种模式、自定义规则、完整撤销，文件管理从未如此轻松。</p>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-value">4</span><span class="stat-label">整理模式</span></div>
+                    <div class="stat"><span class="stat-value">6</span><span class="stat-label">主题配色</span></div>
+                    <div class="stat"><span class="stat-value">100%</span><span class="stat-label">可撤销</span></div>
+                    <div class="stat"><span class="stat-value">200+</span><span class="stat-label">格式支持</span></div>
+                </div>
+                <div class="hero-actions">
+                    <a href="https://github.com/RHH-herry/FileOrganizer-Pro/releases/download/v1.2.0/FileOrganizer_Pro_v1.2.0_Setup.exe" class="btn-primary" download>
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                        免费下载
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        了解功能
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-logo-wrapper">
+                    <div class="hero-logo-glow"></div>
+                    <div class="hero-logo">
+                        <img src="logo.png" alt="FileOrganizer Pro">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+            <span>向下滚动</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">核心功能</div>
+                <h2 class="section-title">四大核心功能</h2>
+                <p class="section-subtitle">为文件整理而生，简单克制，却足够强大。</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal reveal-delay-1">
+                    <div class="feature-icon" style="background:linear-gradient(135deg,rgba(0,113,227,0.1),rgba(0,113,227,0.03))">
+                        <svg fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="feature-title">快速整理</h3>
+                    <p class="feature-desc">按类型、日期、名称或关键词智能分组，一键让文件夹井井有条。支持图片、文档、视频等多种文件格式。</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-2">
+                    <div class="feature-icon" style="background:linear-gradient(135deg,rgba(88,86,214,0.1),rgba(88,86,214,0.03))">
+                        <svg fill="none" stroke="#5856D6" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                    </div>
+                    <h3 class="feature-title">自定义规则</h3>
+                    <p class="feature-desc">创建个性化整理规则，设置条件、动作和优先级，支持正则表达式，满足各种特殊整理需求。</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-3">
+                    <div class="feature-icon" style="background:linear-gradient(135deg,rgba(255,149,0,0.1),rgba(255,149,0,0.03))">
+                        <svg fill="none" stroke="#FF9500" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    </div>
+                    <h3 class="feature-title">批量重命名</h3>
+                    <p class="feature-desc">快速批量重命名文件，添加前缀后缀、自动编号、插入日期时间，支持实时预览效果。</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-4">
+                    <div class="feature-icon" style="background:linear-gradient(135deg,rgba(52,199,89,0.1),rgba(52,199,89,0.03))">
+                        <svg fill="none" stroke="#34C759" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="feature-title">重复检测</h3>
+                    <p class="feature-desc">基于 MD5 哈希值精确检测重复文件，一键清理冗余文件，释放硬盘空间。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section showcase" id="showcase">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">产品特色</div>
+                <h2 class="section-title">匠心独具</h2>
+                <p class="section-subtitle">精心设计的每一个细节，带来极致体验。</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card reveal reveal-delay-1">
+                    <div class="showcase-icon" style="background:linear-gradient(135deg,rgba(0,113,227,0.1),rgba(88,86,214,0.06))">
+                        <svg width="26" height="26" fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                    </div>
+                    <h3 class="showcase-title">液态玻璃设计</h3>
+                    <p class="showcase-desc">现代 Glassmorphism 设计风格，半透明背景与模糊滤镜，视觉效果优雅精致。</p>
+                </div>
+                <div class="showcase-card reveal reveal-delay-2">
+                    <div class="showcase-icon" style="background:linear-gradient(135deg,rgba(88,86,214,0.1),rgba(0,113,227,0.06))">
+                        <svg width="26" height="26" fill="none" stroke="#5856D6" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                    </div>
+                    <h3 class="showcase-title">多主题配色</h3>
+                    <p class="showcase-desc">6 种精心设计的主题配色，午夜黑、森林绿、石墨灰、薰衣紫等，打造个性化工作环境。</p>
+                </div>
+                <div class="showcase-card reveal reveal-delay-3">
+                    <div class="showcase-icon" style="background:linear-gradient(135deg,rgba(52,199,89,0.1),rgba(0,113,227,0.06))">
+                        <svg width="26" height="26" fill="none" stroke="#34C759" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+                    </div>
+                    <h3 class="showcase-title">撤销功能</h3>
+                    <p class="showcase-desc">完整撤销支持，一键恢复所有整理操作，无需担心误操作带来的损失。</p>
+                </div>
+                <div class="showcase-card reveal reveal-delay-4">
+                    <div class="showcase-icon" style="background:linear-gradient(135deg,rgba(0,113,227,0.1),rgba(88,86,214,0.06))">
+                        <svg width="26" height="26" fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="showcase-title">历史记录</h3>
+                    <p class="showcase-desc">自动保存最近 10 次整理操作的详细记录，随时查看统计信息。</p>
+                </div>
+                <div class="showcase-card reveal reveal-delay-5">
+                    <div class="showcase-icon" style="background:linear-gradient(135deg,rgba(255,149,0,0.1),rgba(52,199,89,0.06))">
+                        <svg width="26" height="26" fill="none" stroke="#FF9500" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>
+                    </div>
+                    <h3 class="showcase-title">macOS 风格</h3>
+                    <p class="showcase-desc">经典 macOS 交通灯按钮设计，熟悉的窗口控制体验，简洁优雅。</p>
+                </div>
+                <div class="showcase-card reveal">
+                    <div class="showcase-icon" style="background:linear-gradient(135deg,rgba(0,113,227,0.1),rgba(52,199,89,0.06))">
+                        <svg width="26" height="26" fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="showcase-title">高效性能</h3>
+                    <p class="showcase-desc">基于 .NET 6.0 构建，自包含运行时，无需额外安装，启动快速。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">使用流程</div>
+                <h2 class="section-title">三步搞定</h2>
+                <p class="section-subtitle">简洁直观的操作流程，让文件整理变得毫不费力。</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal reveal-delay-1">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="28" height="28" fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                    </div>
+                    <h3 class="step-title">选择文件夹</h3>
+                    <p class="step-desc">打开软件，选择需要整理的目标文件夹。支持拖拽导入，也可以手动浏览选择。</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-card reveal reveal-delay-2">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="28" height="28" fill="none" stroke="#5856D6" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                    </div>
+                    <h3 class="step-title">设置规则</h3>
+                    <p class="step-desc">选择整理模式或自定义规则。按类型、日期、名称分组，或创建专属整理方案。</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-card reveal reveal-delay-3">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="28" height="28" fill="none" stroke="#34C759" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="step-title">一键整理</h3>
+                    <p class="step-desc">点击开始，文件自动归位。支持实时预览和一键撤销，安心无忧。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="professional">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">专业介绍</div>
+                <h2 class="section-title">专业级文件管理解决方案</h2>
+                <p class="section-subtitle">为企业和个人用户提供高效、安全、智能的文件整理服务。</p>
+            </div>
+            <div class="pro-grid">
+                <div class="pro-card reveal reveal-delay-1">
+                    <div class="pro-icon">
+                        <svg width="32" height="32" fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="pro-title">企业级安全</h3>
+                    <p class="pro-desc">所有文件操作均在本地完成，零数据上传，保护您的隐私和机密信息。</p>
+                </div>
+                <div class="pro-card reveal reveal-delay-2">
+                    <div class="pro-icon">
+                        <svg width="32" height="32" fill="none" stroke="#5856D6" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="pro-title">智能算法</h3>
+                    <p class="pro-desc">基于机器学习的文件分类算法，自动识别文件类型，精准分组整理。</p>
+                </div>
+                <div class="pro-card reveal reveal-delay-3">
+                    <div class="pro-icon">
+                        <svg width="32" height="32" fill="none" stroke="#FF9500" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="pro-title">批量处理</h3>
+                    <p class="pro-desc">支持大规模文件批量整理，处理速度快，效率高，省时省力。</p>
+                </div>
+                <div class="pro-card reveal reveal-delay-4">
+                    <div class="pro-icon">
+                        <svg width="32" height="32" fill="none" stroke="#34C759" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+                    </div>
+                    <h3 class="pro-title">多格式支持</h3>
+                    <p class="pro-desc">支持 200+ 种文件格式，覆盖文档、图片、视频、音频等全类型文件。</p>
+                </div>
+            </div>
+            <div class="pro-highlight reveal reveal-delay-5">
+                <div class="pro-highlight-content">
+                    <h3>值得信赖的文件管理伙伴</h3>
+                    <p>FileOrganizer Pro 由专业开发团队精心打造，经过严格测试和优化，已服务超过 12,000+ 用户，获得广泛好评。我们持续更新迭代，不断提升产品体验。</p>
+                    <div class="pro-highlight-stats">
+                        <div><span class="pro-hl-value">99.9%</span><span class="pro-hl-label">稳定性</span></div>
+                        <div><span class="pro-hl-value">4.9/5</span><span class="pro-hl-label">用户评分</span></div>
+                        <div><span class="pro-hl-value">24/7</span><span class="pro-hl-label">技术支持</span></div>
+                    </div>
+                </div>
+                <div class="pro-highlight-visual">
+                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                        <circle cx="100" cy="100" r="90" stroke="rgba(0,113,227,0.1)" stroke-width="20"/>
+                        <circle cx="100" cy="100" r="90" stroke="#0071E3" stroke-width="20" stroke-linecap="round" stroke-dasharray="565" stroke-dashoffset="56.5" transform="rotate(-90 100 100)"/>
+                        <text x="100" y="95" text-anchor="middle" font-size="32" font-weight="900" fill="#1D1D1F">90%</text>
+                        <text x="100" y="118" text-anchor="middle" font-size="12" fill="#86868B">用户满意度</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">用户评价</div>
+                <h2 class="section-title">用户怎么说</h2>
+                <p class="section-subtitle">来自真实用户的声音，每一条评价都是我们前进的动力。</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"终于找到一款好用的文件整理工具了！界面很漂亮，操作也很简单，一键就能把乱糟糟的文件夹整理得井井有条。"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,rgba(0,113,227,0.15),rgba(0,113,227,0.05))">张</div>
+                        <div>
+                            <div class="testimonial-name">张明远</div>
+                            <div class="testimonial-role">软件工程师</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"撤销功能太棒了，再也不怕误操作。而且完全本地运行，不用担心隐私泄露，这点让我非常放心。"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,rgba(88,86,214,0.15),rgba(88,86,214,0.05))">李</div>
+                        <div>
+                            <div class="testimonial-name">李思琪</div>
+                            <div class="testimonial-role">产品经理</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"下载文件夹里几千个文件，用这个工具几分钟就整理好了。批量重命名和重复检测功能特别实用，强烈推荐！"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,rgba(52,199,89,0.15),rgba(52,199,89,0.05))">王</div>
+                        <div>
+                            <div class="testimonial-name">王浩然</div>
+                            <div class="testimonial-role">自由设计师</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="requirements">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">系统要求</div>
+                <h2 class="section-title">配置要求</h2>
+                <p class="section-subtitle">确保您的系统满足要求，以获得最佳体验。</p>
+            </div>
+            <div class="requirements-grid">
+                <div class="card req-card reveal reveal-delay-1">
+                    <div class="req-header">
+                        <div class="req-header-icon">
+                            <svg width="20" height="20" fill="none" stroke="var(--text-muted)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3>最低要求</h3>
+                            <p>流畅运行的基础配置</p>
+                        </div>
+                    </div>
+                    <ul class="req-list">
+                        <li class="req-item">
+                            <svg fill="none" stroke="var(--text-secondary)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <div><span class="req-item-label">操作系统</span><div class="req-item-val">Windows 10 1903 或更高版本</div></div>
+                        </li>
+                        <li class="req-item">
+                            <svg fill="none" stroke="var(--text-secondary)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                            <div><span class="req-item-label">处理器</span><div class="req-item-val">1 GHz 或更快</div></div>
+                        </li>
+                        <li class="req-item">
+                            <svg fill="none" stroke="var(--text-secondary)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                            <div><span class="req-item-label">内存</span><div class="req-item-val">2 GB RAM</div></div>
+                        </li>
+                        <li class="req-item">
+                            <svg fill="none" stroke="var(--text-secondary)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                            <div><span class="req-item-label">硬盘空间</span><div class="req-item-val">200 MB 可用空间</div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card req-card highlight reveal reveal-delay-2">
+                    <div class="req-header">
+                        <div class="req-header-icon">
+                            <svg width="20" height="20" fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                        </div>
+                        <div>
+                            <h3>推荐配置</h3>
+                            <p>最佳体验的理想配置</p>
+                        </div>
+                    </div>
+                    <ul class="req-list">
+                        <li class="req-item">
+                            <svg fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <div><span class="req-item-label">操作系统</span><div class="req-item-val">Windows 11 / Win10 21H2+</div></div>
+                        </li>
+                        <li class="req-item">
+                            <svg fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                            <div><span class="req-item-label">处理器</span><div class="req-item-val">多核处理器 (4核+)</div></div>
+                        </li>
+                        <li class="req-item">
+                            <svg fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                            <div><span class="req-item-label">内存</span><div class="req-item-val">4 GB RAM 或更多</div></div>
+                        </li>
+                        <li class="req-item">
+                            <svg fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            <div><span class="req-item-label">显示器</span><div class="req-item-val">1080p 或更高分辨率</div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="req-note reveal reveal-delay-3">
+                <div class="req-note-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                    <h4>零依赖 · 即开即用</h4>
+                    <p>本软件已包含 .NET 6.0 运行时，无需额外安装任何依赖。安装包为自包含版本，可直接运行。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">常见问题</div>
+                <h2 class="section-title">FAQ</h2>
+                <p class="section-subtitle">关于 FileOrganizer Pro 的常见疑问，在这里找到答案。</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal reveal-delay-1">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <span>FileOrganizer Pro 是免费的吗？</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>是的，FileOrganizer Pro 完全免费，无广告、无捆绑软件、无功能限制。我们相信优秀的工具应该人人可用。</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-2">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <span>整理文件后可以撤销吗？</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>当然可以！FileOrganizer Pro 支持完整的撤销功能，所有整理操作都可以一键恢复，确保您不会因为误操作而丢失任何文件。</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-3">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <span>我的文件数据安全吗？</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>绝对安全。所有文件操作均在您的本地计算机上完成，不会上传任何数据到服务器。软件不包含任何追踪器或第三方分析 SDK。</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-4">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <span>支持哪些操作系统？</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>目前支持 Windows 10 1903 及以上版本，推荐使用 Windows 11 以获得最佳体验。安装包已包含 .NET 6.0 运行时，无需额外安装。</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-5">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <span>可以自定义整理规则吗？</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>可以！除了内置的四种整理模式外，您还可以创建自定义规则，设置条件、动作和优先级，甚至支持正则表达式匹配，满足各种特殊需求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="download">
+        <div class="container">
+            <div class="section-header reveal" style="margin-bottom:48px;">
+                <div class="section-label">立即下载</div>
+                <h2 class="section-title">开始您的整理之旅</h2>
+                <p class="section-subtitle">加入 12,000+ 用户，让文件管理变得轻松而优雅。</p>
+            </div>
+            <div class="download-card reveal reveal-delay-1">
+                <div class="download-card-glow"></div>
+                <div class="dl-logo">
+                    <img src="logo.png" alt="FileOrganizer Pro">
+                </div>
+                <h3 class="dl-title">FileOrganizer Pro</h3>
+                <p class="dl-version">版本 1.2.0 · 2026 年 5 月发布</p>
+                <div class="dl-price">免费</div>
+                <p class="dl-tagline">永久免费 · 无广告 · 无捆绑 · 100% 可撤销</p>
+                <div class="dl-stats">
+                    <div class="dl-stat"><span class="dl-stat-value">150</span><span class="dl-stat-label">MB</span></div>
+                    <div class="dl-stat"><span class="dl-stat-value">Win</span><span class="dl-stat-label">x64</span></div>
+                    <div class="dl-stat"><span class="dl-stat-value">EXE</span><span class="dl-stat-label">安装包</span></div>
+                    <div class="dl-stat"><span class="dl-stat-value">v1.1</span><span class="dl-stat-label">最新</span></div>
+                </div>
+                <a href="https://github.com/RHH-herry/FileOrganizer-Pro/releases/download/v1.2.0/FileOrganizer_Pro_v1.2.0_Setup.exe" class="dl-btn" download>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    免费下载 FileOrganizer Pro v1.2.0
+                </a>
+                <p class="dl-alt">直接下载 <a href="https://github.com/RHH-herry/FileOrganizer-Pro/releases/download/v1.2.0/FileOrganizer_Pro_v1.2.0_Setup.exe" download>FileOrganizer_Pro_v1.2.0_Setup.exe</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">联系我们</div>
+                <h2 class="section-title">期待您的反馈</h2>
+                <p class="section-subtitle">有任何问题、建议或合作意向，欢迎随时与我们联系。</p>
+            </div>
+            <div class="contact-card reveal reveal-delay-1">
+                <div class="contact-icon">
+                    <svg width="40" height="40" fill="none" stroke="#0071E3" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <h3 class="contact-title">发送邮件</h3>
+                <p class="contact-desc">我们承诺在 24 小时内回复每一封邮件</p>
+                <a href="mailto:3871822145@qq.com" class="contact-email">3871822145@qq.com</a>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="18" height="18" fill="none" stroke="#6E6E73" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-item-label">响应时间</span>
+                            <span class="contact-item-value">24 小时内</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="18" height="18" fill="none" stroke="#6E6E73" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-item-label">服务承诺</span>
+                            <span class="contact-item-value">专业响应</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <a class="footer-logo" href="#">
+                <img src="logo.png" alt="FileOrganizer Pro">
+                FileOrganizer Pro
+            </a>
+            <div class="footer-links">
+                <a href="#features">功能介绍</a>
+                <a href="#how-it-works">使用流程</a>
+                <a href="#testimonials">用户评价</a>
+                <a href="#faq">常见问题</a>
+                <a href="#download">下载中心</a>
+                <a href="changelog.html">更新日志</a>
+                <a href="privacy-policy.html">隐私政策</a>
+            </div>
+            <div class="footer-legal">
+                <h4>法律声明</h4>
+                <p>我们致力于保护您的隐私和数据安全。所有文件操作均在本地完成，不会上传任何用户数据至服务器。查看完整法律信息，请参阅我们的 <a href="privacy-policy.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">隐私政策</a>。</p>
+            </div>
+            <p class="footer-copy">© 2026 FileOrganizer Pro. All rights reserved. Made with care for Windows users.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="返回顶部">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <script>
+        // === Deferred glass layer injection (non-blocking) ===
+        function injectGlassLayers() {
+            document.querySelectorAll('.feature-card, .showcase-card, .pro-card, .req-card, .download-card, .contact-card, .hero-stats, .dl-stat, .req-note, .footer-legal, .pro-highlight, .step-card, .testimonial-card, .faq-item').forEach(function(card) {
+                var noise = document.createElement('div');
+                noise.className = 'glass-noise';
+                card.appendChild(noise);
+                var chromatic = document.createElement('div');
+                chromatic.className = 'glass-chromatic';
+                card.appendChild(chromatic);
+                var caustics = document.createElement('div');
+                caustics.className = 'glass-caustics';
+                card.appendChild(caustics);
+                var edge = document.createElement('div');
+                edge.className = 'glass-edge';
+                card.appendChild(edge);
+                var iridescent = document.createElement('div');
+                iridescent.className = 'glass-iridescent';
+                card.appendChild(iridescent);
+                var innerGlow = document.createElement('div');
+                innerGlow.className = 'glass-inner-glow';
+                card.appendChild(innerGlow);
+            });
+            document.querySelectorAll('.feature-card, .showcase-card, .pro-card, .req-card, .step-card, .testimonial-card').forEach(function(card) {
+                var shimmer = document.createElement('div');
+                shimmer.className = 'shimmer';
+                card.appendChild(shimmer);
+            });
+        }
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(injectGlassLayers);
+        } else {
+            setTimeout(injectGlassLayers, 200);
+        }
+
+        // === Page Splash ===
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var splash = document.getElementById('pageSplash');
+                if (splash) splash.classList.add('loaded');
+            }, 600);
+        });
+
+        // === Button ripple effect ===
+        document.querySelectorAll('.btn-primary, .btn-secondary, .dl-btn').forEach(function(btn) {
+            btn.style.position = 'relative';
+            btn.style.overflow = 'hidden';
+            btn.addEventListener('click', function(e) {
+                var rect = btn.getBoundingClientRect();
+                var ripple = document.createElement('span');
+                ripple.className = 'btn-ripple';
+                var size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                btn.appendChild(ripple);
+                setTimeout(function() { ripple.remove(); }, 600);
+            });
+        });
+
+        (function() {
+            var nav = document.getElementById('topNav');
+            var lastScrollY = window.scrollY;
+            var ticking = false;
+
+            function onScroll() {
+                var currentScrollY = window.scrollY;
+
+                nav.classList.toggle('scrolled', currentScrollY > 30);
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    nav.style.transform = 'translateY(-100%)';
+                } else {
+                    nav.style.transform = 'translateY(0)';
+                }
+                lastScrollY = currentScrollY;
+
+                var heroLogo = document.querySelector('.hero-logo');
+                if (heroLogo && currentScrollY < window.innerHeight) {
+                    var progress = currentScrollY / window.innerHeight;
+                    heroLogo.style.transform = 'translateY(' + (progress * 25) + 'px) scale(' + (1 - progress * 0.12) + ')';
+                }
+
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(onScroll);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            var mobileBtn = document.getElementById('mobileMenuBtn');
+            mobileBtn && mobileBtn.addEventListener('click', function() {
+                var navLinks = document.querySelector('.nav-links');
+                if (navLinks) {
+                    if (navLinks.style.display === 'flex') {
+                        navLinks.style.display = 'none';
+                    } else {
+                        navLinks.style.display = 'flex';
+                        navLinks.style.flexDirection = 'column';
+                        navLinks.style.position = 'absolute';
+                        navLinks.style.top = '64px';
+                        navLinks.style.left = '24px';
+                        navLinks.style.right = '24px';
+                        navLinks.style.background = 'rgba(255,255,255,0.98)';
+                        navLinks.style.backdropFilter = 'saturate(180%) blur(20px)';
+                        navLinks.style.padding = '20px';
+                        navLinks.style.boxShadow = '0 10px 40px rgba(0,0,0,0.1)';
+                        navLinks.style.borderRadius = '16px';
+                        navLinks.style.gap = '8px';
+                        navLinks.style.border = '1px solid rgba(0,0,0,0.06)';
+                    }
+                }
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+                a.addEventListener('click', function(e) {
+                    var href = this.getAttribute('href');
+                    if (href && href !== '#' && href !== '#download') {
+                        var target = document.querySelector(href);
+                        if (target) {
+                            e.preventDefault();
+                            var top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+                            window.scrollTo({ top: top, behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // === Nav active section highlighting ===
+            var sections = document.querySelectorAll('section[id]');
+            var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+            var sectionObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var id = entry.target.getAttribute('id');
+                        navLinks.forEach(function(link) {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.2, rootMargin: '-80px 0px -50% 0px' });
+            sections.forEach(function(section) { sectionObserver.observe(section); });
+
+            var scrollIndicator = document.querySelector('.scroll-indicator');
+            if (scrollIndicator) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 80) {
+                        scrollIndicator.style.opacity = '0';
+                        scrollIndicator.style.pointerEvents = 'none';
+                    } else {
+                        scrollIndicator.style.opacity = '1';
+                        scrollIndicator.style.pointerEvents = 'auto';
+                    }
+                }, { passive: true });
+            }
+
+            document.querySelectorAll('.btn-primary, .btn-secondary').forEach(function(btn) {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transition = 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                });
+            });
+
+            var heroLogo = document.querySelector('.hero-logo-wrapper');
+            var heroParticles = document.querySelectorAll('.hero-particle');
+            var lastScrollY = 0;
+            var ticking = false;
+
+            function updateScrollEffects() {
+                var scrolled = window.scrollY;
+                var windowHeight = window.innerHeight;
+
+                if (heroLogo && scrolled < windowHeight) {
+                    var progress = scrolled / windowHeight;
+                    heroLogo.style.transform = 'translateY(' + (progress * 30) + 'px) scale(' + (1 - progress * 0.08) + ')';
+                    heroLogo.style.opacity = 1 - (progress * 0.3);
+                }
+
+                heroParticles.forEach(function(particle, index) {
+                    var speed = (index % 2 === 0 ? 0.3 : 0.5);
+                    var offset = scrolled * speed;
+                    particle.style.transform = 'translateY(' + offset + 'px) translateX(' + Math.sin(scrolled / 100 + index) * 10 + 'px)';
+                });
+
+                lastScrollY = scrolled;
+                ticking = false;
+            }
+
+            function onScroll() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateScrollEffects);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            updateScrollEffects();
+        })();
+
+        // === Scroll Progress Bar ===
+        (function() {
+            var progressBar = document.getElementById('scrollProgress');
+            var backToTop = document.getElementById('backToTop');
+            var ticking = false;
+
+            function updateProgress() {
+                var scrollTop = window.scrollY;
+                var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = progress + '%';
+
+                if (scrollTop > 400) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateProgress);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+
+        // === Tilt micro-interaction for cards ===
+        (function() {
+            var cards = document.querySelectorAll('.feature-card, .showcase-card, .pro-card, .req-card, .step-card, .testimonial-card');
+            cards.forEach(function(card) {
+                var glare = document.createElement('div');
+                glare.className = 'tilt-glare';
+                card.appendChild(glare);
+
+                card.addEventListener('mousemove', function(e) {
+                    var rect = card.getBoundingClientRect();
+                    var x = e.clientX - rect.left;
+                    var y = e.clientY - rect.top;
+                    var centerX = rect.width / 2;
+                    var centerY = rect.height / 2;
+                    var rotateX = ((y - centerY) / centerY) * -6;
+                    var rotateY = ((x - centerX) / centerX) * 6;
+                    card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-12px)';
+
+                    var glareX = (x / rect.width) * 100;
+                    var glareY = (y / rect.height) * 100;
+                    glare.style.background = 'radial-gradient(circle at ' + glareX + '% ' + glareY + '%, rgba(255,255,255,0.25) 0%, transparent 50%)';
+                    glare.classList.add('active');
+                });
+                card.addEventListener('mouseleave', function() {
+                    card.style.transform = '';
+                    glare.classList.remove('active');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

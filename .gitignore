@@ -1,0 +1,35 @@
+# 本仓库为 FileOrganizer Pro 的官网 + 分发仓库，不存放源代码。
+# 以下规则用于防止源码或构建产物被误提交。
+
+# —— 源代码与工程文件（严禁提交，本软件闭源）——
+*.cs
+*.xaml
+*.csproj
+*.sln
+*.manifest
+Core/
+Pages/
+Properties/
+Resources/
+Tools/
+
+# —— 构建脚本与产物 ——
+build.ps1
+bin/
+obj/
+publish/
+*.exe
+*.dll
+*.pdb
+*.msi
+*.nupkg
+
+# —— 系统与编辑器 ——
+.vs/
+.idea/
+.vscode/
+Thumbs.db
+desktop.ini
+.DS_Store
+*.user
+*.suo

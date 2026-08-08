@@ -1,0 +1,44 @@
+name: 💡 功能建议
+description: 提出新功能或改进想法
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你的想法！请说明「你想解决什么问题」，而不只是「你想要什么功能」——
+        前者能让我们找到更好的实现方式。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你遇到的实际问题
+      description: 在什么场景下、因为缺少什么而不方便？
+      placeholder: 我经常需要把下载文件夹里的发票 PDF 按月份归档，但现有规则只能按类型分……
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望的解决方式
+      placeholder: 希望自定义规则支持按「文件名中的日期」提取并生成目标文件夹……
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 你目前是怎么绕过的？（可选）
+      description: 现有的替代做法有助于我们判断优先级
+
+  - type: dropdown
+    id: importance
+    attributes:
+      label: 对你的重要程度
+      options:
+        - 锦上添花，有更好
+        - 比较需要，会明显提升效率
+        - 强需求，没有它我用不下去
+    validations:
+      required: true

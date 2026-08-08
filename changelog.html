@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新日志 — FileOrganizer Pro</title>
+    <meta name="description" content="FileOrganizer Pro 各版本更新日志：新功能、界面优化、稳定性修复与安全改进记录。">
+    <meta name="keywords" content="FileOrganizer Pro 更新日志,版本历史,changelog,更新记录">
+    <meta name="author" content="RHH-herry">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rhh-herry.github.io/FileOrganizer-Pro/changelog.html">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="theme-color" content="#0071E3">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FileOrganizer Pro">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="更新日志 — FileOrganizer Pro">
+    <meta property="og:description" content="FileOrganizer Pro 各版本更新日志：新功能、界面优化、稳定性修复与安全改进记录。">
+    <meta property="og:url" content="https://rhh-herry.github.io/FileOrganizer-Pro/changelog.html">
+    <meta property="og:image" content="https://rhh-herry.github.io/FileOrganizer-Pro/images/banner.png">
+    <meta property="og:image:width" content="1216">
+    <meta property="og:image:height" content="832">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="更新日志 — FileOrganizer Pro">
+    <meta name="twitter:description" content="FileOrganizer Pro 各版本更新日志：新功能、界面优化、稳定性修复与安全改进记录。">
+    <meta name="twitter:image" content="https://rhh-herry.github.io/FileOrganizer-Pro/images/banner.png">
+
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0071E3;
+            --primary-hover: #0077ED;
+            --primary-soft: rgba(0,113,227,0.08);
+            --secondary: #34C759;
+            --accent: #5856D6;
+            --accent-2: #FF9500;
+            --text: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --text-muted: #8E8E93;
+            --bg: #FFFFFF;
+            --bg-alt: #F5F5F7;
+            --border: #E5E5EA;
+            --radius: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+            --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --lg-bg: rgba(255, 255, 255, 0.38);
+            --lg-bg-hover: rgba(255, 255, 255, 0.58);
+            --lg-blur: 40px;
+            --lg-saturate: 220%;
+            --lg-border: rgba(255, 255, 255, 0.35);
+            --lg-border-hover: rgba(255, 255, 255, 0.55);
+            --lg-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 4px 16px rgba(0,0,0,0.03), 0 12px 40px rgba(0,0,0,0.04), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -1px 1px rgba(0,0,0,0.02);
+            --lg-shadow-hover: 0 4px 12px rgba(0,0,0,0.04), 0 12px 48px rgba(0,0,0,0.08), 0 24px 72px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.7), inset 0 -1px 1px rgba(0,0,0,0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            letter-spacing: -0.02em;
+            overflow-x: hidden;
+            font-feature-settings: 'cv11', 'ss01', 'ss03', 'kern';
+            font-variant-ligatures: common-ligatures;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        ::-webkit-scrollbar { width: 9px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.015); margin: 4px; }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.12);
+            border-radius: 6px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.22); background-clip: padding-box; border: 2px solid transparent; }
+        ::selection { background: rgba(0, 113, 227, 0.18); color: var(--text); }
+        :focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 4px; }
+
+        @media (hover: hover) {
+            * { transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, opacity 0.25s ease, color 0.25s ease; }
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            z-index: 9999;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 12px rgba(0,113,227,0.5);
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 48px; }
+
+        /* === Navigation === */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 0 48px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.48);
+            backdrop-filter: saturate(200%) blur(40px);
+            -webkit-backdrop-filter: saturate(200%) blur(40px);
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+            transition: all 0.5s var(--ease);
+        }
+        .nav::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 30%, transparent 55%, rgba(255,255,255,0.15) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .nav > * { position: relative; z-index: 1; }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            transition: opacity 0.3s var(--ease);
+        }
+        .nav-logo:hover { opacity: 0.92; }
+        .nav-logo img { width: 32px; height: 32px; border-radius: 10px; transition: transform 0.5s var(--spring); box-shadow: 0 2px 8px rgba(0,113,227,0.12); }
+        .nav-logo:hover img { transform: scale(1.08) rotate(3deg); }
+        .nav-logo span { font-weight: 700; font-size: 15px; letter-spacing: -0.3px; }
+        .nav-links { display: flex; gap: 36px; align-items: center; }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.3s var(--ease), opacity 0.3s var(--ease);
+            position: relative;
+            opacity: 0.9;
+        }
+        .nav-links a:hover { color: var(--text); opacity: 1; }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px; left: 50%;
+            width: 0; height: 2px;
+            background: var(--primary);
+            border-radius: 1px;
+            transition: width 0.35s var(--ease), left 0.35s var(--ease);
+            transform: translateX(-50%);
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* === Hero === */
+        .hero {
+            padding: 140px 48px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-alt);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -300px; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(0,113,227,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -200px; right: -100px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(52,199,89,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin-bottom: 24px;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            overflow: hidden;
+            animation: badgeEnter 0.9s var(--spring) 0.2s both;
+        }
+        .hero-badge .dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--secondary);
+            box-shadow: 0 0 12px rgba(52,199,89,0.7);
+            animation: dotPulse 2.5s ease-in-out infinite;
+        }
+        @keyframes badgeEnter { from { opacity: 0; transform: translateY(-18px) scale(0.88); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes dotPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+
+        .hero h1 {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 800;
+            letter-spacing: -2.5px;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+            animation: titleReveal 1s var(--ease-out) 0.3s both;
+        }
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        @keyframes titleReveal { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 0.9s var(--ease) 0.5s both;
+        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* === Timeline === */
+        .timeline-section {
+            padding: 80px 0 100px;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 0;
+            perspective: 1400px;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 30%, var(--accent) 60%, var(--accent-2) 85%, transparent 100%);
+            opacity: 0.2;
+            border-radius: 1px;
+        }
+
+        .version-entry {
+            position: relative;
+            padding-left: 64px;
+            margin-bottom: 56px;
+        }
+        .version-entry:last-child { margin-bottom: 0; }
+
+        .version-dot {
+            position: absolute;
+            left: 12px;
+            top: 28px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 3px solid var(--primary);
+            z-index: 2;
+            transition: all 0.4s var(--spring);
+            box-shadow: 0 0 0 4px rgba(0,113,227,0.1);
+        }
+        .version-entry:nth-child(2) .version-dot { border-color: var(--secondary); box-shadow: 0 0 0 4px rgba(52,199,89,0.1); }
+        .version-entry:nth-child(3) .version-dot { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(88,86,214,0.1); }
+        .version-entry:nth-child(4) .version-dot { border-color: var(--accent-2); box-shadow: 0 0 0 4px rgba(255,149,0,0.1); }
+        .version-entry:nth-child(5) .version-dot { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(88,86,214,0.1); }
+        .version-entry:nth-child(6) .version-dot { border-color: var(--text-muted); box-shadow: 0 0 0 4px rgba(142,142,147,0.1); }
+
+        .version-entry:hover .version-dot {
+            transform: scale(1.3);
+            box-shadow: 0 0 0 6px rgba(0,113,227,0.15);
+        }
+        .version-entry:nth-child(2):hover .version-dot { box-shadow: 0 0 0 6px rgba(52,199,89,0.15); }
+        .version-entry:nth-child(3):hover .version-dot { box-shadow: 0 0 0 6px rgba(88,86,214,0.15); }
+        .version-entry:nth-child(4):hover .version-dot { box-shadow: 0 0 0 6px rgba(255,149,0,0.15); }
+        .version-entry:nth-child(5):hover .version-dot { box-shadow: 0 0 0 6px rgba(88,86,214,0.15); }
+        .version-entry:nth-child(6):hover .version-dot { box-shadow: 0 0 0 6px rgba(142,142,147,0.15); }
+
+        .version-card {
+            padding: 36px 40px;
+            border-radius: var(--radius-lg);
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        .version-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.25) 12%, rgba(255,255,255,0.08) 28%, transparent 42%, rgba(255,255,255,0.03) 55%, rgba(255,255,255,0.1) 70%, rgba(255,255,255,0.2) 85%, rgba(255,255,255,0.35) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .version-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 55%;
+            border-radius: inherit;
+            background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.08) 35%, transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .version-card > * { position: relative; z-index: 1; }
+        .version-card:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-6px);
+        }
+        .version-entry:nth-child(1) .version-card:hover { background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(255,255,255,0.55)); }
+        .version-entry:nth-child(2) .version-card:hover { background: linear-gradient(135deg, rgba(52,199,89,0.06), rgba(255,255,255,0.55)); }
+        .version-entry:nth-child(3) .version-card:hover { background: linear-gradient(135deg, rgba(88,86,214,0.06), rgba(255,255,255,0.55)); }
+        .version-entry:nth-child(4) .version-card:hover { background: linear-gradient(135deg, rgba(255,149,0,0.06), rgba(255,255,255,0.55)); }
+        .version-entry:nth-child(5) .version-card:hover { background: linear-gradient(135deg, rgba(88,86,214,0.06), rgba(255,255,255,0.55)); }
+        .version-entry:nth-child(6) .version-card:hover { background: linear-gradient(135deg, rgba(142,142,147,0.06), rgba(255,255,255,0.55)); }
+
+        .version-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .version-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: -0.2px;
+        }
+        .version-tag.v-major { background: rgba(0,113,227,0.1); color: var(--primary); }
+        .version-tag.v-minor { background: rgba(52,199,89,0.1); color: var(--secondary); }
+        .version-tag.v-patch { background: rgba(88,86,214,0.1); color: var(--accent); }
+        .version-tag.v-beta { background: rgba(255,149,0,0.1); color: var(--accent-2); }
+        .version-date {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .version-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+        .version-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .changes-list { list-style: none; }
+        .change-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+        .change-item:last-child { border-bottom: none; }
+        .change-icon {
+            width: 24px; height: 24px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .change-icon svg { width: 14px; height: 14px; }
+        .change-icon.new { background: rgba(52,199,89,0.12); }
+        .change-icon.new svg { color: var(--secondary); }
+        .change-icon.improved { background: rgba(0,113,227,0.12); }
+        .change-icon.improved svg { color: var(--primary); }
+        .change-icon.fixed { background: rgba(255,149,0,0.12); }
+        .change-icon.fixed svg { color: var(--accent-2); }
+        .change-icon.optimized { background: rgba(88,86,214,0.12); }
+        .change-icon.optimized svg { color: var(--accent); }
+        .change-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+        .change-text strong { color: var(--text); font-weight: 600; }
+
+        .version-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.04);
+        }
+        .version-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        .version-stat svg { width: 14px; height: 14px; }
+
+        /* === Footer === */
+        footer {
+            padding: 36px 0 28px;
+            text-align: center;
+            background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+        }
+        .footer-links { margin-bottom: 18px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s var(--ease);
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-copy { font-size: 11px; color: var(--text-muted); }
+
+        /* === Back to Top === */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px; right: 32px;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: var(--lg-bg);
+            backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturate));
+            border: 1px solid var(--lg-border);
+            box-shadow: var(--lg-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px) scale(0.8);
+            transition: opacity 0.4s var(--ease), transform 0.4s var(--spring), background 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+        }
+        .back-to-top:hover {
+            background: var(--lg-bg-hover);
+            border-color: var(--lg-border-hover);
+            box-shadow: var(--lg-shadow-hover);
+            transform: translateY(-4px) scale(1.08);
+        }
+        .back-to-top svg { width: 20px; height: 20px; color: var(--primary); }
+
+        /* === Reveal === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === Tilt glare === */
+        .tilt-glare {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s var(--ease);
+            z-index: 3;
+        }
+        .tilt-glare.active { opacity: 1; }
+
+        /* === Glass Noise Texture (CSS-only, lightweight) === */
+        .glass-noise {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 128px 128px;
+            mix-blend-mode: overlay;
+        }
+        .glass-chromatic {
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 0;
+            background: linear-gradient(135deg,
+                rgba(0,113,227,0.1) 0%,
+                rgba(88,86,214,0.05) 12%,
+                transparent 28%,
+                transparent 72%,
+                rgba(88,86,214,0.06) 88%,
+                rgba(0,113,227,0.08) 100%
+            );
+            filter: blur(1.5px);
+        }
+
+        /* === Glass Caustics - Light Refraction Spots === */
+        .glass-caustics {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.04;
+            background:
+                radial-gradient(ellipse at 25% 25%, rgba(0,113,227,0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 75% 75%, rgba(88,86,214,0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(52,199,89,0.2) 0%, transparent 40%);
+            mix-blend-mode: overlay;
+            animation: glassBreathe 8s ease-in-out infinite;
+        }
+        @keyframes glassBreathe {
+            0%, 100% { opacity: 0.03; }
+            50% { opacity: 0.06; }
+        }
+
+        /* === Glass Edge Highlight - Gradient Border Glow === */
+        .glass-edge {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 2;
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.15), rgba(255,255,255,0.05), rgba(255,255,255,0.3)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        /* === Glass Iridescent Border - Color-shifting edge === */
+        .glass-iridescent {
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 3;
+            border: 1px solid transparent;
+            background: conic-gradient(from 180deg, rgba(0,113,227,0.15), rgba(88,86,214,0.12), rgba(52,199,89,0.1), rgba(255,149,0,0.08), rgba(0,113,227,0.15)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.6s var(--ease);
+        }
+        .version-card:hover .glass-iridescent {
+            opacity: 1;
+        }
+
+        /* === Glass Inner Glow on Hover === */
+        .glass-inner-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s var(--ease);
+            background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.15) 0%, transparent 60%);
+        }
+        .version-card:hover .glass-inner-glow {
+            opacity: 1;
+        }
+
+        /* === Page Loading Splash === */
+        .page-splash {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            transition: opacity 0.6s var(--ease), visibility 0.6s var(--ease);
+        }
+        .page-splash.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .splash-logo {
+            width: 64px; height: 64px;
+            border-radius: 18px;
+            animation: splashPulse 1.2s var(--ease) infinite;
+            box-shadow: 0 12px 40px rgba(0,113,227,0.3);
+        }
+        @keyframes splashPulse {
+            0%,100% { transform: scale(1); box-shadow: 0 12px 40px rgba(0,113,227,0.3); }
+            50% { transform: scale(1.08); box-shadow: 0 16px 50px rgba(0,113,227,0.45); }
+        }
+        .splash-bar {
+            width: 120px; height: 3px;
+            border-radius: 3px;
+            background: rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+        .splash-bar-inner {
+            height: 100%;
+            width: 0%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            animation: splashLoad 1s var(--ease-out) forwards;
+        }
+        @keyframes splashLoad { to { width: 100%; } }
+
+        /* === Shimmer on cards === */
+        .shimmer {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -120%;
+            width: 80%; height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 15%, rgba(255,255,255,0.18) 40%, rgba(255,255,255,0.06) 65%, transparent 100%);
+            transition: left 0.8s var(--ease);
+        }
+        .version-card:hover .shimmer::after,
+        .policy-card:hover .shimmer::after {
+            left: 140%;
+        }
+
+        /* === Staggered reveal for version entries === */
+        .version-entry:nth-child(1) { transition-delay: 0s; }
+        .version-entry:nth-child(2) { transition-delay: 0.08s; }
+        .version-entry:nth-child(3) { transition-delay: 0.16s; }
+        .version-entry:nth-child(4) { transition-delay: 0.24s; }
+        .version-entry:nth-child(5) { transition-delay: 0.32s; }
+        .version-entry:nth-child(6) { transition-delay: 0.40s; }
+
+        @media (max-width: 900px) {
+            .container { padding: 0 20px; }
+            .nav { padding: 0 20px; height: 56px; }
+            .nav-links { display: none; }
+            .hero { padding: 100px 20px 50px; }
+            .version-card { padding: 24px 20px; }
+            .timeline-section { padding: 50px 0; }
+            .version-entry { padding-left: 52px; margin-bottom: 40px; }
+            .timeline-line { left: 16px; }
+            .version-dot { left: 8px; }
+        }
+        @media (max-width: 600px) {
+            .version-card { padding: 20px; }
+            .version-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+            .version-stats { flex-wrap: wrap; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-splash" id="pageSplash">
+        <img class="splash-logo" src="logo.png" alt="FileOrganizer Pro">
+        <div class="splash-bar"><div class="splash-bar-inner"></div></div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="nav">
+        <a class="nav-logo" href="index.html">
+            <img src="logo.png" alt="FileOrganizer Pro">
+            <span>FileOrganizer Pro</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html#features">功能</a>
+            <a href="index.html#showcase">特色</a>
+            <a href="index.html#download">下载</a>
+            <a href="index.html#contact">联系我们</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            持续迭代 · 精益求精
+        </div>
+        <h1>更新<span>日志</span></h1>
+        <p>每一次更新，都让文件整理更智能、更优雅。查看 FileOrganizer Pro 的版本演进历程。</p>
+    </section>
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <!-- v1.2.0 -->
+                <div class="version-entry reveal">
+                    <div class="version-dot"></div>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <span class="version-tag v-major">v1.2.0</span>
+                            <span class="version-date">2026 年 7 月 26 日</span>
+                        </div>
+                        <h3 class="version-title">性能与现代化升级</h3>
+                        <p class="version-subtitle">底层框架升级至 .NET 10，更新核心依赖并精简项目结构，运行更流畅、更安全、更易维护。</p>
+                        <ul class="changes-list">
+                            <li class="change-item">
+                                <div class="change-icon improved"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                                <span class="change-text"><strong>框架升级：</strong>目标框架由 .NET 6（已停止支持）升级至 .NET 10 LTS，获得长期支持与运行时性能优化</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon improved"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                                <span class="change-text"><strong>依赖更新：</strong>Serilog 升级至 4.0、Serilog.Sinks.File 至 6.0、System.Drawing.Common 至 9.0</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>项目精简：</strong>新增 .gitignore，清理冗余构建产物，仓库结构更清晰</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v1.1.0 -->
+                <div class="version-entry reveal">
+                    <div class="version-dot"></div>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <span class="version-tag v-major">v1.1.0</span>
+                            <span class="version-date">2026 年 6 月 18 日</span>
+                        </div>
+                        <h3 class="version-title">液态玻璃 · 全面进化</h3>
+                        <p class="version-subtitle">本次更新带来全新的视觉设计语言，液态玻璃效果全面升级，交互体验更加流畅自然。</p>
+                        <ul class="changes-list">
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>全新液态玻璃设计系统：</strong>引入 Glassmorphism 设计语言，半透明背景配合饱和度滤镜，视觉效果更加通透精致</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>滚动进度条：</strong>页面顶部新增彩色渐变进度指示器，实时反馈浏览位置</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>返回顶部按钮：</strong>滚动时自动浮现的浮动按钮，一键回到页面顶部</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon improved"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                                <span class="change-text"><strong>卡片 3D 倾斜动效：</strong>功能卡片跟随鼠标实现透视倾斜，交互层次感大幅提升</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon improved"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                                <span class="change-text"><strong>底栏布局优化：</strong>缩短页脚高度，信息密度更合理</span>
+                            </li>
+                        </ul>
+                        <div class="version-stats">
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>5 项更新</div>
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>性能提升 15%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- v1.0.5 -->
+                <div class="version-entry reveal">
+                    <div class="version-dot"></div>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <span class="version-tag v-minor">v1.0.5</span>
+                            <span class="version-date">2026 年 5 月 20 日</span>
+                        </div>
+                        <h3 class="version-title">性能飞跃 · 体验优化</h3>
+                        <p class="version-subtitle">深度优化文件扫描引擎，大幅提升大文件夹处理速度，修复多个已知问题。</p>
+                        <ul class="changes-list">
+                            <li class="change-item">
+                                <div class="change-icon optimized"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                                <span class="change-text"><strong>扫描引擎重构：</strong>采用并行扫描算法，10 万文件扫描速度提升 3 倍</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon optimized"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                                <span class="change-text"><strong>内存占用优化：</strong>峰值内存占用降低 40%，大文件处理更稳定</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon fixed"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14L21 3m0 0v6m0-6h-6"/></svg></div>
+                                <span class="change-text"><strong>修复：</strong>解决含特殊字符路径的文件无法整理的问题</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon fixed"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14L21 3m0 0v6m0-6h-6"/></svg></div>
+                                <span class="change-text"><strong>修复：</strong>解决批量重命名时序号跳变的问题</span>
+                            </li>
+                        </ul>
+                        <div class="version-stats">
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4 项更新</div>
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>扫描速度 3x</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- v1.0.0 -->
+                <div class="version-entry reveal">
+                    <div class="version-dot"></div>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <span class="version-tag v-major">v1.0.0</span>
+                            <span class="version-date">2026 年 4 月 15 日</span>
+                        </div>
+                        <h3 class="version-title">正式发布 · 里程碑版本</h3>
+                        <p class="version-subtitle">FileOrganizer Pro 正式版发布，带来完整的文件整理解决方案和优雅的用户体验。</p>
+                        <ul class="changes-list">
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>四大整理模式：</strong>按类型、日期、名称、关键词智能分组整理</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>自定义规则引擎：</strong>支持条件、动作、优先级配置，正则表达式匹配</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>批量重命名：</strong>前缀后缀、自动编号、日期时间插入，实时预览</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>重复文件检测：</strong>基于 MD5 哈希精确识别，一键清理冗余</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>6 套主题配色：</strong>午夜黑、森林绿、石墨灰、薰衣紫、暖琥珀、苹果浅</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>完整撤销系统：</strong>一键恢复所有整理操作，零风险使用</span>
+                            </li>
+                        </ul>
+                        <div class="version-stats">
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>6 项更新</div>
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>正式发布</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- v0.9.0 -->
+                <div class="version-entry reveal">
+                    <div class="version-dot"></div>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <span class="version-tag v-beta">v0.9.0 Beta</span>
+                            <span class="version-date">2026 年 3 月 8 日</span>
+                        </div>
+                        <h3 class="version-title">公开测试 · 功能完善</h3>
+                        <p class="version-subtitle">面向社区公开测试版本，收集用户反馈，完善核心功能与交互细节。</p>
+                        <ul class="changes-list">
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>历史记录系统：</strong>自动保存最近 10 次操作记录，支持统计查看</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>紧急撤销管理器：</strong>独立撤销页面，快速回退误操作</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon improved"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                                <span class="change-text"><strong>macOS 风格窗口：</strong>交通灯按钮设计，熟悉优雅的窗口控制</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon fixed"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14L21 3m0 0v6m0-6h-6"/></svg></div>
+                                <span class="change-text"><strong>修复：</strong>解决深色主题下文字对比度不足的问题</span>
+                            </li>
+                        </ul>
+                        <div class="version-stats">
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4 项更新</div>
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>Beta 版本</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- v0.8.0 -->
+                <div class="version-entry reveal">
+                    <div class="version-dot"></div>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <span class="version-tag v-beta">v0.8.0 Beta</span>
+                            <span class="version-date">2026 年 2 月 1 日</span>
+                        </div>
+                        <h3 class="version-title">主题系统 · 个性定制</h3>
+                        <p class="version-subtitle">引入多主题配色系统，用户可根据喜好自由切换界面风格。</p>
+                        <ul class="changes-list">
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>主题管理器：</strong>支持运行时动态切换主题，无需重启应用</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>3 套初始主题：</strong>苹果浅色、午夜黑、森林绿配色方案</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon improved"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                                <span class="change-text"><strong>设置页面：</strong>全新设置界面，配置项分类清晰</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon optimized"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                                <span class="change-text"><strong>启动速度优化：</strong>冷启动时间缩短至 1.2 秒以内</span>
+                            </li>
+                        </ul>
+                        <div class="version-stats">
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4 项更新</div>
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>Beta 版本</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- v0.5.0 -->
+                <div class="version-entry reveal">
+                    <div class="version-dot"></div>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <span class="version-tag v-patch">v0.5.0 Alpha</span>
+                            <span class="version-date">2026 年 1 月 10 日</span>
+                        </div>
+                        <h3 class="version-title">初始版本 · 从零开始</h3>
+                        <p class="version-subtitle">FileOrganizer Pro 的第一个内部测试版本，奠定产品核心架构与设计方向。</p>
+                        <ul class="changes-list">
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>项目架构搭建：</strong>基于 .NET 6.0 WPF 构建，MVVM 架构模式</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>基础整理功能：</strong>按文件类型自动分类整理的初始实现</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>文件扫描服务：</strong>递归扫描目录树，支持文件元数据读取</span>
+                            </li>
+                            <li class="change-item">
+                                <div class="change-icon new"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></div>
+                                <span class="change-text"><strong>启动画面：</strong>品牌 Splash 动画窗口</span>
+                            </li>
+                        </ul>
+                        <div class="version-stats">
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4 项更新</div>
+                            <div class="version-stat"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>初始版本</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <button class="back-to-top" id="backToTop" aria-label="返回顶部">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">返回首页</a>
+            <a href="index.html#features">功能介绍</a>
+            <a href="index.html#download">下载中心</a>
+            <a href="privacy-policy.html">隐私政策</a>
+        </div>
+        <p class="footer-copy">© 2026 FileOrganizer Pro. All rights reserved. Made with care for Windows users.</p>
+    </footer>
+
+    <script>
+        // === Deferred glass layer injection ===
+        function injectGlassLayers() {
+            document.querySelectorAll('.version-card').forEach(function(card) {
+                var noise = document.createElement('div');
+                noise.className = 'glass-noise';
+                card.appendChild(noise);
+                var chromatic = document.createElement('div');
+                chromatic.className = 'glass-chromatic';
+                card.appendChild(chromatic);
+                var caustics = document.createElement('div');
+                caustics.className = 'glass-caustics';
+                card.appendChild(caustics);
+                var edge = document.createElement('div');
+                edge.className = 'glass-edge';
+                card.appendChild(edge);
+                var iridescent = document.createElement('div');
+                iridescent.className = 'glass-iridescent';
+                card.appendChild(iridescent);
+                var innerGlow = document.createElement('div');
+                innerGlow.className = 'glass-inner-glow';
+                card.appendChild(innerGlow);
+            });
+        }
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(injectGlassLayers);
+        } else {
+            setTimeout(injectGlassLayers, 200);
+        }
+
+        // === Page Splash ===
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var splash = document.getElementById('pageSplash');
+                if (splash) splash.classList.add('loaded');
+            }, 900);
+        });
+
+        // === Inject shimmer elements ===
+        document.querySelectorAll('.version-card').forEach(function(card) {
+            var shimmer = document.createElement('div');
+            shimmer.className = 'shimmer';
+            card.appendChild(shimmer);
+        });
+
+        (function() {
+            var progressBar = document.getElementById('scrollProgress');
+            var backToTop = document.getElementById('backToTop');
+            var ticking = false;
+
+            function updateProgress() {
+                var scrollTop = window.scrollY;
+                var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = progress + '%';
+
+                if (scrollTop > 400) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateProgress);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // === Tilt for version cards ===
+            var cards = document.querySelectorAll('.version-card');
+            cards.forEach(function(card) {
+                var glare = document.createElement('div');
+                glare.className = 'tilt-glare';
+                card.appendChild(glare);
+
+                card.addEventListener('mousemove', function(e) {
+                    var rect = card.getBoundingClientRect();
+                    var x = e.clientX - rect.left;
+                    var y = e.clientY - rect.top;
+                    var centerX = rect.width / 2;
+                    var centerY = rect.height / 2;
+                    var rotateX = ((y - centerY) / centerY) * -3;
+                    var rotateY = ((x - centerX) / centerX) * 3;
+                    card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-6px)';
+
+                    var glareX = (x / rect.width) * 100;
+                    var glareY = (y / rect.height) * 100;
+                    glare.style.background = 'radial-gradient(circle at ' + glareX + '% ' + glareY + '%, rgba(255,255,255,0.2) 0%, transparent 50%)';
+                    glare.classList.add('active');
+                });
+                card.addEventListener('mouseleave', function() {
+                    card.style.transform = '';
+                    glare.classList.remove('active');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

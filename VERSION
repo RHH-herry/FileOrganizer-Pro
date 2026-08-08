@@ -1,0 +1,27 @@
+{
+  "product": "FileOrganizer Pro",
+  "productId": "FileOrganizer-Pro",
+  "version": "1.2.0",
+  "channel": "stable",
+  "edition": "正式版 / Official Release",
+  "build": "2026.08.08.001",
+  "serial": "FOP-1.2.0-20260808-001",
+  "releaseDate": "2026-08-08",
+  "minimumOS": "Windows 10 (1809+) / Windows 11，x64；自包含发布内置 .NET 10 运行时，无需预装",
+  "targetFramework": "net10.0-windows (win-x64, self-contained)",
+  "licenseModel": "proprietary",
+  "sourceAvailable": false,
+  "official": true,
+  "repositoryRole": "distribution-and-website",
+  "installer": {
+    "fileName": "FileOrganizer_Pro_v1.2.0_Setup.exe",
+    "sha256": "9AAF0E87E5E31CDFDD120568BA5785BF7E0D9628CFA0749CE54444FE7422E320",
+    "downloadUrl": "https://github.com/RHH-herry/FileOrganizer-Pro/releases/download/v1.2.0/FileOrganizer_Pro_v1.2.0_Setup.exe"
+  },
+  "uninstaller": {
+    "fileName": "Uninstall.exe",
+    "sha256": "A532DE87B36620457D933B00B4EF3A69C1185E2193481B30E3D5BA0742213D4D"
+  },
+  "website": "https://rhh-herry.github.io/FileOrganizer-Pro/",
+  "notes": "v1.2.0 结束众测 (Crowd Test)，定为正式稳定版 (stable)。本软件为闭源专有软件，全部源代码不公开；本仓库仅承担官网、分发下载、版本元数据与安全文档职能，不支持从源码构建。"
+}

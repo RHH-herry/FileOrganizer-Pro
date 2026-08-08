@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rhh-herry.github.io/FileOrganizer-Pro/sitemap.xml
